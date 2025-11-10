@@ -72,12 +72,12 @@ const Contact = () => {
               contact us
             </p>
             <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs color__white text-uppercase mb-4">
-              contact us to get more info
+              Prêt à lancer votre chantier ?
             </h3>
             <p className="roboto normal font__size--16 text__16-1024 color__white">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              Faites appel à une équipe locale expérimentée, à l’écoute de vos
+              besoins, qui comprend vos contraintes et assure un suivi rigoureux
+              à chaque étape de votre projet.
             </p>
           </div>
           <div className="col-md-6 col-xl-5 offset-xl-1">
@@ -86,7 +86,7 @@ const Contact = () => {
               onSubmit={handleValidatedSubmit}
             >
               <h3 className="bold font__size--32 color__black text-uppercase mb-4">
-                get a free quote
+                demander un devis
               </h3>
               {state.succeeded && (
                 <div className="alert alert-success mb-4" role="alert">
@@ -98,14 +98,14 @@ const Contact = () => {
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-name"
                 >
-                  Name
+                  Nom
                 </label>
                 <input
                   id="contact-name"
                   name="name"
                   type="text"
                   className="form-control wrapper__field"
-                  placeholder="Enter your Name"
+                  placeholder="Entrer votre nom"
                   required
                 />
               </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                   type="email"
                   inputMode="email"
                   className="form-control wrapper__field"
-                  placeholder="Enter your Email"
+                  placeholder="Entrer votre email"
                   required
                   value={email}
                   onChange={handleEmailChange}
@@ -141,7 +141,7 @@ const Contact = () => {
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-phone"
                 >
-                  phone number
+                  Numero de telephone
                 </label>
                 <input
                   id="contact-phone"
@@ -150,7 +150,7 @@ const Contact = () => {
                   inputMode="tel"
                   pattern="\+?[0-9\s]{10,18}"
                   className="form-control wrapper__field"
-                  placeholder="Enter your phone number"
+                  placeholder="Entrer votre numero de telephone"
                   value={phone}
                   onChange={handlePhoneChange}
                   required
@@ -176,7 +176,7 @@ const Contact = () => {
                   name="message"
                   className="form-control wrapper__field textarea"
                   rows="5"
-                  placeholder="Type here..."
+                  placeholder="Décrivez votre projet…"
                   required
                 ></textarea>
                 <ValidationError
@@ -190,7 +190,7 @@ const Contact = () => {
                 className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"
                 disabled={state.submitting}
               >
-                {state.submitting ? "sending..." : "request a quote"}
+                {state.submitting ? "sending..." : "Demander votre devis"}
               </button>
             </form>
           </div>

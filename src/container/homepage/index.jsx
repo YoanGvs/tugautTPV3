@@ -7,6 +7,7 @@ import Blog from "../../component/Section/Blog";
 import Contact from "../../component/Section/Contact";
 import Service from "../../component/Section/Service";
 import SliderConstruction from "../../component/Slider/SliderConstruction";
+import Step from "../../component/Section/Step";
 
 const Index = (props) => {
   const service = [
@@ -93,6 +94,8 @@ const Index = (props) => {
 
         <About />
 
+        <Step />
+
         <Service service={service} />
 
         <section className="overflow-hidden">
@@ -107,7 +110,7 @@ const Index = (props) => {
           <SliderConstruction />
         </section>
 
-        <Blog blog={blog} title={"news & articles"} top={"latest blog"} />
+        {/* <Blog blog={blog} title={"news & articles"} top={"latest blog"} /> */}
 
         <Contact />
 
