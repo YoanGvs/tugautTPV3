@@ -61,8 +61,8 @@ const Index = (props) => {
             <div className="container">
               <div className="text-center">
                 <h1 className="semi-bold font__size--90 text__90-1024 text__90-md text__90-sm text__90-xs  color__white text-uppercase mb-0">
-                  TUGAUT TP <br className="d-none d-sm-block" /> Votre expert
-                  local en terrassement et assainissement dans l’Oise
+                  TUGAUT TP <br className="d-none d-sm-block" />
+                  terrassement et assainissement dans l’Oise
                 </h1>
                 <p className="medium roboto font__size--16 text__16-1024 color__white my-4">
                   Entreprise familiale experte depuis plus de 12 ans,{" "}
@@ -107,7 +107,7 @@ const Index = (props) => {
           <SliderConstruction />
         </section>
 
-        {/* <Blog blog={blog} title={"news & articles"} top={"latest blog"} /> */}
+        <Blog blog={blog} title={"news & articles"} top={"latest blog"} />
 
         <Contact />
 

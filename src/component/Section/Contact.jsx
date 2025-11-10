@@ -1,43 +1,203 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
+const formatPhoneInput = (value) => {
+  const digitsOnly = value.replace(/\D/g, "").slice(0, 15);
+  return digitsOnly.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+};
+
+const isPhoneValid = (value) => {
+  const digits = value.replace(/\D/g, "");
+  return digits.length >= 10 && digits.length <= 15;
+};
+
+const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
 const Contact = () => {
-    return (
-        <section className="position-relative">
-            <img src="./../images/sdad.png" className="images__wrap-contact" alt="" />
-            <div className="wrapper__bg-orange-wrap"></div>
-            <div className="container position-relative z-2">
-                <div className="row">
-                    <div className="col-md-6 mb-4 my-md-auto">
-                        <p className="semi-bold font__size--14 text__14-1024 color__white text-uppercase">contact us</p>
-                        <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs color__white text-uppercase mb-4">contact us to get more info</h3>
-                        <p className="roboto normal font__size--16 text__16-1024 color__white">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    </div>
-                    <div className="col-md-6 col-xl-5 offset-xl-1">
-                        <div className="wrapper__form-contact bg__white mb__min-14">
-                            <h3 className="bold font__size--32 color__black text-uppercase mb-4">get a free quote</h3>
-                            <div class="form-group mb-4 ">
-                                <label className="semi-bold font__size--14 text__14-1024 text-uppercase">Name</label>
-                                <input type="email" class="form-control wrapper__field" placeholder="Enter your Name" />
-                            </div>
-                            <div class="form-group mb-4 ">
-                                <label className="semi-bold font__size--14 text__14-1024 text-uppercase">Email</label>
-                                <input type="email" class="form-control wrapper__field" placeholder="Enter your Email" />
-                            </div>
-                            <div class="form-group mb-4 ">
-                                <label className="semi-bold font__size--14 text__14-1024 text-uppercase">phone number</label>
-                                <input type="email" class="form-control wrapper__field" placeholder="Enter your phone number" />
-                            </div>
-                            <div class="form-group mb-4  mb-4">
-                                <label className="semi-bold font__size--14 text__14-1024 text-uppercase">message</label>
-                                <textarea class="form-control wrapper__field textarea" cols="30" rows="5" placeholder="Type here..."></textarea>
-                            </div>
-                            <button className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase">request a quote</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+  const [state, handleSubmit] = useForm("xvgvjkkb");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
 
-export default Contact
+  useEffect(() => {
+    if (state.succeeded) {
+      setEmail("");
+      setPhone("");
+      setEmailError("");
+      setPhoneError("");
+    }
+  }, [state.succeeded]);
+
+  const handleEmailChange = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+    setEmailError(
+      value && !emailRegex.test(value) ? "Adresse email invalide." : ""
+    );
+  };
+
+  const handlePhoneChange = (event) => {
+    const formatted = formatPhoneInput(event.target.value);
+    setPhone(formatted);
+    setPhoneError(
+      formatted && !isPhoneValid(formatted)
+        ? "Numéro de téléphone invalide."
+        : ""
+    );
+  };
+
+  const handleValidatedSubmit = (event) => {
+    const emailIsValid = emailRegex.test(email);
+    const phoneIsValid = isPhoneValid(phone);
+
+    if (!emailIsValid || !phoneIsValid) {
+      event.preventDefault();
+      setEmailError(emailIsValid ? "" : "Adresse email invalide.");
+      setPhoneError(phoneIsValid ? "" : "Numéro de téléphone invalide.");
+      return;
+    }
+
+    handleSubmit(event);
+  };
+
+  return (
+    <section className="position-relative">
+      <img src="./../images/sdad.png" className="images__wrap-contact" alt="" />
+      <div className="wrapper__bg-orange-wrap"></div>
+      <div className="container position-relative z-2">
+        <div className="row">
+          <div className="col-md-6 mb-4 my-md-auto">
+            <p className="semi-bold font__size--14 text__14-1024 color__white text-uppercase">
+              contact us
+            </p>
+            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs color__white text-uppercase mb-4">
+              contact us to get more info
+            </h3>
+            <p className="roboto normal font__size--16 text__16-1024 color__white">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
+          <div className="col-md-6 col-xl-5 offset-xl-1">
+            <form
+              className="wrapper__form-contact bg__white mb__min-14"
+              onSubmit={handleValidatedSubmit}
+            >
+              <h3 className="bold font__size--32 color__black text-uppercase mb-4">
+                get a free quote
+              </h3>
+              {state.succeeded && (
+                <div className="alert alert-success mb-4" role="alert">
+                  Merci ! Votre demande a bien été envoyée.
+                </div>
+              )}
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-name"
+                >
+                  Name
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  className="form-control wrapper__field"
+                  placeholder="Enter your Name"
+                  required
+                />
+              </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-email"
+                >
+                  Email
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  inputMode="email"
+                  className="form-control wrapper__field"
+                  placeholder="Enter your Email"
+                  required
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                {emailError && (
+                  <p className="text-danger small mb-2">{emailError}</p>
+                )}
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-phone"
+                >
+                  phone number
+                </label>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="tel"
+                  pattern="\+?[0-9\s]{10,18}"
+                  className="form-control wrapper__field"
+                  placeholder="Enter your phone number"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  required
+                />
+                {phoneError && (
+                  <p className="text-danger small mb-2">{phoneError}</p>
+                )}
+                <ValidationError
+                  prefix="Phone"
+                  field="phone"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-message"
+                >
+                  message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  className="form-control wrapper__field textarea"
+                  rows="5"
+                  placeholder="Type here..."
+                  required
+                ></textarea>
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
+              <button
+                type="submit"
+                className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"
+                disabled={state.submitting}
+              >
+                {state.submitting ? "sending..." : "request a quote"}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
