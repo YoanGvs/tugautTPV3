@@ -22,45 +22,21 @@ const Navbar = (props) => {
               <img src="./../images/Close.png" onClick={() => setToogleMenu(!toogleMenu)} className="pointer" alt="" />
             </div>
             <div className="menu">
-              <NavLink to="/" className="medium font__size--14 text__14-1024 color__white">Home</NavLink>
+              <NavLink to="/" exact className="medium font__size--14 text__14-1024 color__white">
+                Accueil
+              </NavLink>
               <hr />
-              <div className="position-relative">
-                <div
-                  className="wrapper__drodown-wrap medium font__size--14 text__14-1024 color__white pointer"
-                  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                >
-                  <div className="d-flex align-items-center">
-                    pages
-                    <svg className="ms-2 arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.70742 5.88334L4.7005 5.87711L4.69314 5.87142C4.46003 5.69119 4.12805 5.71226 3.91883 5.93027C3.69372 6.16484 3.69372 6.54105 3.91883 6.77561L7.08012 10.0697L7.08648 10.0764L7.0933 10.0825L7.13129 10.1167L7.13821 10.1229L7.14557 10.1286C7.37868 10.3088 7.71066 10.2877 7.91988 10.0697L11.0812 6.77561L11.0875 6.76903L11.0933 6.762L11.1261 6.72242L11.1319 6.71538L11.1372 6.70793C11.3037 6.47418 11.2865 6.14425 11.0812 5.93027L11.0748 5.92365L11.068 5.91751L11.03 5.88334L11.0231 5.87711L11.0157 5.87142C10.7826 5.69119 10.4506 5.71226 10.2414 5.93027C10.2414 5.93027 10.2414 5.93027 10.2414 5.93027L7.5 8.78672L4.75858 5.93027L4.75223 5.92365L4.74541 5.91751L4.70742 5.88334Z" fill="white" stroke="white" stroke-width="0.5" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="dropdown-menu wrapper__dropdown-menu-all medium font__size--14 text__14-1024" aria-labelledby="dropdownMenuButton1">
-                  <NavLink
-                    to="/about" className="dropdown-item" href="#">About</NavLink>
-                  <NavLink
-                    to="/contact" className="dropdown-item" href="#">Contact</NavLink>
-                  <NavLink
-                    to="/news/detail" className="dropdown-item" href="#">Detail News</NavLink>
-                  <NavLink
-                    to="/service/detail" className="dropdown-item" href="#">Detail Service</NavLink>
-                  <NavLink
-                    to="/project/detail" className="dropdown-item" href="#">Detail Project</NavLink>
-                  <NavLink
-                    to="/terms" className="dropdown-item" href="#">Terms</NavLink>
-                  <NavLink
-                    to="/privacy" className="dropdown-item" href="#">Privacy</NavLink>
-                </div>
-              </div>
+              <NavLink to="/about" className="medium font__size--14 text__14-1024 color__white">
+                À propos
+              </NavLink>
               <hr />
-              <NavLink
-                to="/videos" className="medium font__size--14 text__14-1024 color__white">Service</NavLink>
+              <NavLink to="/service" className="medium font__size--14 text__14-1024 color__white">
+                Service
+              </NavLink>
               <hr />
-              <NavLink to="/contact" className="medium font__size--14 text__14-1024 color__white">Project</NavLink>
-              <hr />
-              <NavLink to="/faq" className="medium font__size--14 text__14-1024 color__white">News</NavLink>
-
+              <NavLink to="/contact" className="medium font__size--14 text__14-1024 color__white">
+                Nous contacter
+              </NavLink>
             </div>
           </div>
         </div>
@@ -92,60 +68,31 @@ const Navbar = (props) => {
                   exact
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
                 >
-                  Home
+                  Accueil
                 </NavLink>
               </li>
-              <li className="nav-item position-relative">
-                <div
-                  className="nav-link wrapper__drodown-wrap semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover pointer"
-                  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false"
+              <li className="nav-item">
+                <NavLink
+                  to="/about"
+                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
                 >
-                  <div className="d-flex align-items-center">
-                    pages
-                    <svg className="ms-2 arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.70742 5.88334L4.7005 5.87711L4.69314 5.87142C4.46003 5.69119 4.12805 5.71226 3.91883 5.93027C3.69372 6.16484 3.69372 6.54105 3.91883 6.77561L7.08012 10.0697L7.08648 10.0764L7.0933 10.0825L7.13129 10.1167L7.13821 10.1229L7.14557 10.1286C7.37868 10.3088 7.71066 10.2877 7.91988 10.0697L11.0812 6.77561L11.0875 6.76903L11.0933 6.762L11.1261 6.72242L11.1319 6.71538L11.1372 6.70793C11.3037 6.47418 11.2865 6.14425 11.0812 5.93027L11.0748 5.92365L11.068 5.91751L11.03 5.88334L11.0231 5.87711L11.0157 5.87142C10.7826 5.69119 10.4506 5.71226 10.2414 5.93027C10.2414 5.93027 10.2414 5.93027 10.2414 5.93027L7.5 8.78672L4.75858 5.93027L4.75223 5.92365L4.74541 5.91751L4.70742 5.88334Z" fill="white" stroke="white" stroke-width="0.5" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="dropdown-menu wrapper__dropdown-menu-all" aria-labelledby="dropdownMenuButton2">
-                  <NavLink
-                    to="/about" className="dropdown-item" href="#">About</NavLink>
-                  <NavLink
-                    to="/contact" className="dropdown-item" href="#">Contact</NavLink>
-                  <NavLink
-                    to="/news/detail" className="dropdown-item" href="#">Detail News</NavLink>
-                  <NavLink
-                    to="/service/detail" className="dropdown-item" href="#">Detail Service</NavLink>
-                  <NavLink
-                    to="/project/detail" className="dropdown-item" href="#">Detail Project</NavLink>
-                  <NavLink
-                    to="/terms" className="dropdown-item" href="#">Terms</NavLink>
-                  <NavLink
-                    to="/privacy" className="dropdown-item" href="#">Privacy</NavLink>
-                </div>
+                  À propos
+                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
                   to="/service"
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
                 >
-                  service
+                  Service
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/project"
+                  to="/contact"
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
                 >
-                  project
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/news"
-                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
-                >
-                  News
+                  Nous contacter
                 </NavLink>
               </li>
             </ul>

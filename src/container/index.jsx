@@ -28,7 +28,7 @@ const Index = (props) => {
           <Route path="/project" element={<Project />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/service/detail" element={<DetailService />} />
+          <Route path="/service/detail/:slug" element={<DetailService />} />
           <Route path="/project/detail" element={<DetailProject />} />
           <Route path="/news/detail" element={<DetailNews />} />
           <Route path="/terms" element={<Terms />} />

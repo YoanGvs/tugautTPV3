@@ -8,25 +8,10 @@ import Contact from "../../component/Section/Contact";
 import Service from "../../component/Section/Service";
 import SliderConstruction from "../../component/Slider/SliderConstruction";
 import Step from "../../component/Section/Step";
+import services from "../../data/services";
 
 const Index = (props) => {
-  const service = [
-    {
-      img: "./../images/Image (4).png",
-      title: "Petroleum & Gas Energy",
-      desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    },
-    {
-      img: "./../images/Image (5).png",
-      title: "Construction & Engineering",
-      desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    },
-    {
-      img: "./../images/Image (6).png",
-      title: "Auto & Mechanical Engineering",
-      desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    },
-  ];
+  const featuredServices = services.slice(0, 3);
 
   const blog = [
     {
@@ -96,7 +81,7 @@ const Index = (props) => {
 
         <Step />
 
-        <Service service={service} />
+        <Service service={featuredServices} />
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">
