@@ -8,6 +8,7 @@ import Contact from "../../component/Section/Contact";
 import Service from "../../component/Section/Service";
 import SliderConstruction from "../../component/Slider/SliderConstruction";
 import Step from "../../component/Section/Step";
+import Testimonial from "../../component/Section/Testimonial";
 import services from "../../data/services";
 
 const Index = (props) => {
@@ -82,6 +83,8 @@ const Index = (props) => {
         <Step />
 
         <Service service={featuredServices} />
+
+        <Testimonial />
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">
