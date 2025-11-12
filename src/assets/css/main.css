@@ -2242,6 +2242,10 @@ h5 {
   color: #ffffff;
   background-color: #EA6B00;
 }
+.btn__orange:hover {
+  color: #ffffff;
+  background-color: #EA6B00;
+}
 .btn__orange.shadow {
   box-shadow: none !important;
 }

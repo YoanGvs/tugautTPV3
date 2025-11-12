@@ -65,7 +65,7 @@ const Footer = (props) => {
             </ul>
           </div>
           <div className="col-6 col-md-3 mb-4 mb-md-0">
-            <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
+            {/* <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               nos reseau sociaux
             </h5>
 
@@ -79,7 +79,7 @@ const Footer = (props) => {
               <a href="#!">
                 <img src="./../images/WA.png" alt="" />
               </a>
-            </div>
+            </div> */}
 
             <div className="mt-5">
               <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
@@ -117,7 +117,7 @@ const Footer = (props) => {
           </div> */}
         </div>
         <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-5">
-          Copyright Buildup. 2022 All Right Reserved
+          Copyright Tugaut TP. 2025 All Right Reserved
         </div>
       </div>
     </section>

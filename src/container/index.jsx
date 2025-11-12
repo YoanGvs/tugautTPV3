@@ -16,6 +16,7 @@ import DetailNews from "./homepage/DetailNews";
 import Contact from "./homepage/Contact";
 import Terms from "./homepage/Terms";
 import Privacy from "./homepage/Privacy";
+import Merci from "./homepage/Merci";
 
 const Index = (props) => {
   return (
@@ -33,6 +34,7 @@ const Index = (props) => {
           <Route path="/news/detail" element={<DetailNews />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/merci" element={<Merci />} />
         </Routes>
       </Router>
     </Fragment>

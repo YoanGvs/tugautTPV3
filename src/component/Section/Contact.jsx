@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useEffect, useRef, useState } from "react";
+import { useForm } from "@formspree/react";
 
 const formatPhoneInput = (value) => {
   const digitsOnly = value.replace(/\D/g, "").slice(0, 15);
@@ -12,49 +12,153 @@ const isPhoneValid = (value) => {
 };
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
+const PROJECT_OPTIONS = [
+  "Assainissement",
+  "Terrassement",
+  "Aménagement extérieur",
+  "Démolition",
+  "Location benne",
+  "Location pelle",
+];
+const OISE_CITIES = [
+  "Beauvais",
+  "Compiègne",
+  "Creil",
+  "Chantilly",
+  "Senlis",
+  "Nogent-sur-Oise",
+  "Méru",
+  "Clermont",
+  "Noyon",
+  "Pont-Sainte-Maxence",
+];
+
+const initialFormState = {
+  name: "",
+  email: "",
+  phone: "",
+  projectType: "",
+  siteAddress: "",
+  city: "",
+  description: "",
+  budget: "",
+  consent: false,
+};
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xvgvjkkb");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
+  const [formData, setFormData] = useState(initialFormState);
+  const [errors, setErrors] = useState({});
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [fileError, setFileError] = useState("");
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
-    if (state.succeeded) {
-      setEmail("");
-      setPhone("");
-      setEmailError("");
-      setPhoneError("");
+    if (!state.succeeded) return;
+
+    setFormData(initialFormState);
+    setErrors({});
+    setSelectedFiles([]);
+    setFileError("");
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
     }
+
+    const redirectTimeout = setTimeout(() => {
+      window.location.assign("/merci");
+    }, 800);
+
+    return () => clearTimeout(redirectTimeout);
   }, [state.succeeded]);
 
-  const handleEmailChange = (event) => {
-    const { value } = event.target;
-    setEmail(value);
-    setEmailError(
-      value && !emailRegex.test(value) ? "Adresse email invalide." : ""
-    );
+  const validateField = (field, value) => {
+    switch (field) {
+      case "name":
+        return value.trim() ? "" : "Veuillez saisir votre nom.";
+      case "email":
+        return emailRegex.test(value)
+          ? ""
+          : value
+          ? "Adresse e-mail invalide."
+          : "Adresse e-mail invalide.";
+      case "phone":
+        return isPhoneValid(value)
+          ? ""
+          : "Numéro de téléphone invalide.";
+      case "projectType":
+        return value ? "" : "Sélectionnez un type de projet.";
+      case "city":
+        return value.trim() ? "" : "Indiquez la ville du chantier.";
+      case "description":
+        return value.trim() ? "" : "Décrivez brièvement votre besoin.";
+      case "consent":
+        return value ? "" : "Veuillez accepter pour envoyer.";
+      default:
+        return "";
+    }
   };
 
-  const handlePhoneChange = (event) => {
-    const formatted = formatPhoneInput(event.target.value);
-    setPhone(formatted);
-    setPhoneError(
-      formatted && !isPhoneValid(formatted)
-        ? "Numéro de téléphone invalide."
-        : ""
-    );
+  const validateFiles = (files = []) => {
+    return files.some((file) => file.size > MAX_FILE_SIZE)
+      ? "Fichier trop volumineux (max 10 Mo)."
+      : "";
+  };
+
+  const updateField = (field, value) => {
+    const nextValue = field === "phone" ? formatPhoneInput(value) : value;
+    setFormData((prev) => ({
+      ...prev,
+      [field]: nextValue,
+    }));
+
+    if (["email", "phone"].includes(field)) {
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, nextValue),
+      }));
+    } else if (errors[field]) {
+      setErrors((prev) => ({
+        ...prev,
+        [field]: validateField(field, nextValue),
+      }));
+    }
+  };
+
+  const handleFileChange = (event) => {
+    const files = Array.from(event.target.files || []);
+    setSelectedFiles(files);
+    setFileError(validateFiles(files));
   };
 
   const handleValidatedSubmit = (event) => {
-    const emailIsValid = emailRegex.test(email);
-    const phoneIsValid = isPhoneValid(phone);
+    const requiredFields = [
+      "name",
+      "email",
+      "phone",
+      "projectType",
+      "description",
+      "consent",
+    ];
 
-    if (!emailIsValid || !phoneIsValid) {
+    const newErrors = requiredFields.reduce((acc, field) => {
+      const value = field === "consent" ? formData.consent : formData[field];
+      return {
+        ...acc,
+        [field]: validateField(field, value),
+      };
+    }, {});
+
+    const currentFileError = validateFiles(selectedFiles);
+    setFileError(currentFileError);
+    setErrors((prev) => ({ ...prev, ...newErrors }));
+
+    const hasErrors =
+      Object.values(newErrors).some(Boolean) || Boolean(currentFileError);
+
+    if (hasErrors) {
       event.preventDefault();
-      setEmailError(emailIsValid ? "" : "Adresse email invalide.");
-      setPhoneError(phoneIsValid ? "" : "Numéro de téléphone invalide.");
       return;
     }
 
@@ -79,11 +183,24 @@ const Contact = () => {
               besoins, qui comprend vos contraintes et assure un suivi rigoureux
               à chaque étape de votre projet.
             </p>
+            <div className="mt-4 d-none d-lg-block">
+              <div className="ratio ratio-4x3 rounded overflow-hidden shadow">
+                <iframe
+                  title="TUGAUT TP localisation"
+                  src="https://maps.google.com/maps?q=162%20Rue%20des%20Cerisiers%20Roussel%2C%2060700%20Pontpoint&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
           </div>
           <div className="col-md-6 col-xl-5 offset-xl-1">
             <form
               className="wrapper__form-contact bg__white mb__min-14"
               onSubmit={handleValidatedSubmit}
+              noValidate
             >
               <h3 className="bold font__size--32 color__black text-uppercase mb-4">
                 demander un devis
@@ -93,28 +210,39 @@ const Contact = () => {
                   Merci ! Votre demande a bien été envoyée.
                 </div>
               )}
+              {state.errors?.length > 0 && (
+                <div className="alert alert-danger mb-4" role="alert">
+                  Une erreur est survenue. Réessayez ou contactez-nous au 06 12
+                  34 56 78.
+                </div>
+              )}
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-name"
                 >
-                  Nom
+                  Nom*
                 </label>
                 <input
                   id="contact-name"
                   name="name"
                   type="text"
                   className="form-control wrapper__field"
-                  placeholder="Entrer votre nom"
+                  placeholder="Dupont"
+                  value={formData.name}
+                  onChange={(event) => updateField("name", event.target.value)}
                   required
                 />
+                {errors.name && (
+                  <p className="text-danger small mb-0">{errors.name}</p>
+                )}
               </div>
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-email"
                 >
-                  Email
+                  E-mail*
                 </label>
                 <input
                   id="contact-email"
@@ -122,75 +250,205 @@ const Contact = () => {
                   type="email"
                   inputMode="email"
                   className="form-control wrapper__field"
-                  placeholder="Entrer votre email"
+                  placeholder="exemple@domaine.fr"
                   required
-                  value={email}
-                  onChange={handleEmailChange}
+                  value={formData.email}
+                  onChange={(event) => updateField("email", event.target.value)}
                 />
-                {emailError && (
-                  <p className="text-danger small mb-2">{emailError}</p>
+                {errors.email && (
+                  <p className="text-danger small mb-0">{errors.email}</p>
                 )}
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
               </div>
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-phone"
                 >
-                  Numero de telephone
+                  Téléphone*
                 </label>
                 <input
                   id="contact-phone"
                   name="phone"
                   type="tel"
                   inputMode="tel"
-                  pattern="\+?[0-9\s]{10,18}"
                   className="form-control wrapper__field"
-                  placeholder="Entrer votre numero de telephone"
-                  value={phone}
-                  onChange={handlePhoneChange}
+                  placeholder="06 12 34 56 78"
+                  value={formData.phone}
+                  onChange={(event) => updateField("phone", event.target.value)}
                   required
                 />
-                {phoneError && (
-                  <p className="text-danger small mb-2">{phoneError}</p>
+                {errors.phone && (
+                  <p className="text-danger small mb-0">{errors.phone}</p>
                 )}
-                <ValidationError
-                  prefix="Phone"
-                  field="phone"
-                  errors={state.errors}
-                />
               </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-project-type"
+                >
+                  Type de projet*
+                </label>
+                <select
+                  id="contact-project-type"
+                  name="projectType"
+                  className="form-control wrapper__field"
+                  value={formData.projectType}
+                  onChange={(event) =>
+                    updateField("projectType", event.target.value)
+                  }
+                  required
+                >
+                  <option value="">Sélectionnez un type de projet</option>
+                  {PROJECT_OPTIONS.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                {errors.projectType && (
+                  <p className="text-danger small mb-0">{errors.projectType}</p>
+                )}
+              </div>
+              {/* <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-site-address"
+                >
+                  Adresse du chantier
+                </label>
+                <input
+                  id="contact-site-address"
+                  name="siteAddress"
+                  type="text"
+                  className="form-control wrapper__field"
+                  placeholder="12 rue des Artisans"
+                  value={formData.siteAddress}
+                  onChange={(event) =>
+                    updateField("siteAddress", event.target.value)
+                  }
+                />
+              </div> */}
+              {/* <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-city"
+                >
+                  Ville*
+                </label>
+                <input
+                  id="contact-city"
+                  name="city"
+                  type="text"
+                  list="oise-cities"
+                  className="form-control wrapper__field"
+                  placeholder="Compiègne"
+                  value={formData.city}
+                  onChange={(event) => updateField("city", event.target.value)}
+                  required
+                />
+                <datalist id="oise-cities">
+                  {OISE_CITIES.map((city) => (
+                    <option key={city} value={city} />
+                  ))}
+                </datalist>
+                {errors.city && (
+                  <p className="text-danger small mb-0">{errors.city}</p>
+                )}
+              </div> */}
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-message"
                 >
-                  message
+                  Description du besoin*
                 </label>
                 <textarea
                   id="contact-message"
-                  name="message"
+                  name="description"
                   className="form-control wrapper__field textarea"
                   rows="5"
-                  placeholder="Décrivez votre projet…"
+                  placeholder="Décrivez brièvement votre besoin…"
+                  value={formData.description}
+                  onChange={(event) =>
+                    updateField("description", event.target.value)
+                  }
                   required
                 ></textarea>
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
+                {errors.description && (
+                  <p className="text-danger small mb-0">{errors.description}</p>
+                )}
+              </div>
+              {/* <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-budget"
+                >
+                  Budget / échéance (optionnel)
+                </label>
+                <input
+                  id="contact-budget"
+                  name="budget"
+                  type="text"
+                  className="form-control wrapper__field"
+                  placeholder="Ex : 50 000 € - fin T3"
+                  value={formData.budget}
+                  onChange={(event) => updateField("budget", event.target.value)}
                 />
+              </div> */}
+              {/* <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase d-flex justify-content-between"
+                  htmlFor="contact-files"
+                >
+                  Upload fichiers
+                  <span className="normal font__size--12 color__gray-2">
+                    plans/photos (max 10 Mo, jpg/png/pdf)
+                  </span>
+                </label>
+                <input
+                  id="contact-files"
+                  name="files"
+                  type="file"
+                  className="form-control wrapper__field"
+                  accept=".jpg,.jpeg,.png,.pdf"
+                  multiple
+                  onChange={handleFileChange}
+                  ref={fileInputRef}
+                />
+                {fileError && (
+                  <p className="text-danger small mb-0">{fileError}</p>
+                )}
+              </div> */}
+              <div className="form-group mb-4 form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="contact-consent"
+                  name="consent"
+                  checked={formData.consent}
+                  onChange={(event) =>
+                    updateField("consent", event.target.checked)
+                  }
+                  required
+                />
+                <label
+                  className="form-check-label semi-bold font__size--14 text__14-1024"
+                  htmlFor="contact-consent"
+                >
+                  J’accepte que TUGAUT TP me contacte au sujet de ma demande.*
+                </label>
+                {errors.consent && (
+                  <p className="text-danger small mb-0">{errors.consent}</p>
+                )}
               </div>
               <button
                 type="submit"
                 className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"
                 disabled={state.submitting}
               >
-                {state.submitting ? "sending..." : "Demander votre devis"}
+                {state.submitting
+                  ? "Envoi en cours…"
+                  : "Envoyer ma demande de devis"}
               </button>
             </form>
           </div>

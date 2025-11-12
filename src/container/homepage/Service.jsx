@@ -23,7 +23,7 @@ const Service = () => {
 
         {/* <Number /> */}
 
-        <Step />
+        {/* <Step /> */}
 
         <Contact />
 

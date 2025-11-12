@@ -17,14 +17,20 @@ const DetailService = () => {
           <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
           <div className="wrapper__bg-head"></div>
           <Navbar />
-          <Head default="home" current={service?.title || "Service"} title={service?.title || "Service"} />
+          <Head
+            default="home"
+            current={service?.title || "Service"}
+            title={service?.title || "Service"}
+          />
         </div>
 
         <section>
           <div className="container">
             <div className="row">
               <div className="col-md-4 mb-4 mb-md-0">
-                <h3 className="medium font__size--20 text__20-1024 text-uppercase mb-3">Nos services</h3>
+                <h3 className="medium font__size--20 text__20-1024 text-uppercase mb-3">
+                  Nos services
+                </h3>
 
                 <ul className="list__menu-side">
                   {services.map((item) => (
@@ -42,13 +48,15 @@ const DetailService = () => {
                 </ul>
               </div>
               <div className="col-md-8">
-                <img
+                {/* <img
                   src={service.heroImg || service.img}
                   className="images__dt-service mb-4"
                   alt={service.title}
-                />
+                /> */}
 
-                <h1 className="bold font__size--32 text__32-1024 mb-3 text-uppercase">{service.title}</h1>
+                <h1 className="bold font__size--32 text__32-1024 mb-3 text-uppercase">
+                  {service.title}
+                </h1>
 
                 <p className="normal roboto font__size--16 text__20-1024 color__gray-1 lh-2 mb-3">
                   {service.intro}
@@ -73,14 +81,25 @@ const DetailService = () => {
 
                 {service.highlights?.length > 0 && (
                   <div className="mb-5">
-                    <h3 className="bold font__size--20 text__20-1024 mb-3 text-uppercase">Nos engagements clés</h3>
+                    <h3 className="bold font__size--20 text__20-1024 mb-3 text-uppercase">
+                      Nos engagements clés
+                    </h3>
                     <ul className="list-unstyled">
                       {service.highlights.map((highlight) => (
-                        <li key={`${service.slug}-${highlight.title}`} className="mb-3">
+                        <li
+                          key={`${service.slug}-${highlight.title}`}
+                          className="mb-3"
+                        >
                           <div className="d-flex align-items-start">
-                            <img src="./../images/asas.png" className="object-fit-content mt-1" alt="" />
+                            <img
+                              src="./../images/asas.png"
+                              className="object-fit-content mt-1"
+                              alt=""
+                            />
                             <div className="ms-3">
-                              <p className="semi-bold roboto font__size--16 text__20-1024 mb-1">{highlight.title}</p>
+                              <p className="semi-bold roboto font__size--16 text__20-1024 mb-1">
+                                {highlight.title}
+                              </p>
                               <p className="normal roboto font__size--16 text__20-1024 color__gray-1 lh-2 mb-0">
                                 {highlight.text}
                               </p>
@@ -94,14 +113,22 @@ const DetailService = () => {
 
                 {service.deliverables?.length > 0 && (
                   <>
-                    <h3 className="bold font__size--20 text__20-1024 mb-3 text-uppercase">Ce que vous obtenez</h3>
+                    <h3 className="bold font__size--20 text__20-1024 mb-3 text-uppercase">
+                      Ce que vous obtenez
+                    </h3>
 
                     <ul className="list__detail-info">
                       {service.deliverables.map((item, index) => (
                         <li key={`${service.slug}-deliverable-${index}`}>
                           <div className="d-flex align-items-start">
-                            <img src="./../images/asas.png" className="object-fit-content mt-2" alt="" />
-                            <p className="ms-3 normal roboto font__size--16 text__20-1024 color__gray-1 lh-2">{item}</p>
+                            <img
+                              src="./../images/asas.png"
+                              className="object-fit-content mt-2"
+                              alt=""
+                            />
+                            <p className="ms-3 normal roboto font__size--16 text__20-1024 color__gray-1 lh-2">
+                              {item}
+                            </p>
                           </div>
                         </li>
                       ))}
