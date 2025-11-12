@@ -4,11 +4,16 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
-  const [toogleMenu, setToogleMenu] = useState(false)
+  const [toogleMenu, setToogleMenu] = useState(false);
 
   return (
     <Fragment>
-      <div className={"wrapper__side-nav-mobile d-flex d-lg-none " + (toogleMenu ? "active" : "")}>
+      <div
+        className={
+          "wrapper__side-nav-mobile d-flex d-lg-none " +
+          (toogleMenu ? "active" : "")
+        }
+      >
         <div className="d-flex flex-wrap w-100">
           <div className="w-100">
             <div className="d-flex align-items-center justify-content-between mb-4">
@@ -17,31 +22,52 @@ const Navbar = (props) => {
                 exact
                 className="navbar-brand font__size--24 text__24-1024 semi-bold color__white"
               >
-                BUILD<span className="color__orange">UP</span>
+                TUGAUT<span className="color__orange">TP</span>
               </NavLink>
-              <img src="./../images/Close.png" onClick={() => setToogleMenu(!toogleMenu)} className="pointer" alt="" />
+              <img
+                src="./../images/Close.png"
+                onClick={() => setToogleMenu(!toogleMenu)}
+                className="pointer"
+                alt=""
+              />
             </div>
             <div className="menu">
-              <NavLink to="/" exact className="medium font__size--14 text__14-1024 color__white">
+              <NavLink
+                to="/"
+                exact
+                className="medium font__size--14 text__14-1024 color__white"
+              >
                 Accueil
               </NavLink>
               <hr />
-              <NavLink to="/about" className="medium font__size--14 text__14-1024 color__white">
+              <NavLink
+                to="/about"
+                className="medium font__size--14 text__14-1024 color__white"
+              >
                 À propos
               </NavLink>
               <hr />
-              <NavLink to="/service" className="medium font__size--14 text__14-1024 color__white">
+              <NavLink
+                to="/service"
+                className="medium font__size--14 text__14-1024 color__white"
+              >
                 Service
               </NavLink>
               <hr />
-              <NavLink to="/contact" className="medium font__size--14 text__14-1024 color__white">
+              <NavLink
+                to="/contact"
+                className="medium font__size--14 text__14-1024 color__white"
+              >
                 Nous contacter
               </NavLink>
             </div>
           </div>
         </div>
-      </div >
-      <div className="bg__wrap-menu d-lg-none" onClick={() => setToogleMenu(!toogleMenu)}></div>
+      </div>
+      <div
+        className="bg__wrap-menu d-lg-none"
+        onClick={() => setToogleMenu(!toogleMenu)}
+      ></div>
       <nav
         className="navbar navbar-expand-lg bg__black-2 wrapper__navbar position-relative z-2"
         data-aos="fade-down"
@@ -54,7 +80,7 @@ const Navbar = (props) => {
             exact
             className="navbar-brand font__size--24 text__24-1024 semi-bold color__white"
           >
-            BUILD<span className="color__orange">UP</span>
+            TUGAUT<span className="color__orange">TP</span>
           </NavLink>
 
           <div
@@ -106,10 +132,15 @@ const Navbar = (props) => {
             <span></span>
             <span></span>
           </div>
-          <a href="#!" className="d-none d-lg-block semi-bold font__size--14 btn btn__outlined--white color__white no__opacity h__black rounded-0 shadow ms-auto text-uppercase">get a quote</a>
+          <a
+            href="#!"
+            className="d-none d-lg-block semi-bold font__size--14 btn btn__outlined--white color__white no__opacity h__black rounded-0 shadow ms-auto text-uppercase"
+          >
+            nous contacter
+          </a>
         </div>
       </nav>
-    </Fragment >
+    </Fragment>
   );
 };
 

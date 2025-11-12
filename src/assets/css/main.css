@@ -3146,6 +3146,32 @@ h5 {
 .wrapper__list-footer li:last-child {
   margin-bottom: 0;
 }
+.footer__brand p {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__contact-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.footer__contact-item span {
+  line-height: 1.4;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__brand,
+  .footer__links,
+  .footer__contact {
+    text-align: center;
+  }
+  .footer__brand p {
+    max-width: none;
+  }
+  .footer__contact-item {
+    text-align: center;
+  }
+}
 .wrapper__field {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.15);

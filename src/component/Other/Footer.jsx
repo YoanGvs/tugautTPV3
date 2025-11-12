@@ -5,9 +5,9 @@ const Footer = (props) => {
   return (
     <section className={"pb-4 " + (props.type != "contact" ? "mt__10" : "")}>
       <div className="container">
-        <div className="row">
-          <div className="col-md-3 mb-4 mb-md-0">
-            <h3 className="semi-bold font__size--24 text__24-1024 color__black">
+        <div className="row align-items-start">
+          <div className="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 footer__brand text-center text-md-start">
+            <h3 className="semi-bold font__size--24 text__24-1024 color__black mb-3 mb-md-4">
               TUGAUT<span className="color__orange">TP</span>
             </h3>
             <p className="normal font__size--16 text__16-1024 roboto color__gray-1">
@@ -16,12 +16,12 @@ const Footer = (props) => {
               conformes aux normes environnementales.{" "}
             </p>
           </div>
-          <div className="col-6 col-md-2 mb-4 mb-md-0">
-            <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
+          <div className="col-6 col-md-3 col-lg-3 mb-4 mb-md-0 footer__links">
+            <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3 text-center text-md-start">
               links
             </h5>
 
-            <ul className="wrapper__list-footer">
+            <ul className="wrapper__list-footer text-center text-md-start">
               <li>
                 <NavLink
                   to="/"
@@ -64,7 +64,7 @@ const Footer = (props) => {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-md-3 mb-4 mb-md-0">
+          <div className="col-12 col-md-6 col-lg-5 mb-4 mb-md-0 footer__contact text-center text-md-start">
             {/* <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               nos reseau sociaux
             </h5>
@@ -81,19 +81,19 @@ const Footer = (props) => {
               </a>
             </div> */}
 
-            <div className="mt-5">
-              <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
+            <div className="mt-4 mt-md-5">
+              <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3 text-center text-md-start">
                 nous contacter
               </h5>
-              <div className="d-flex align-items-center mb-3">
+              <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start footer__contact-item mb-3">
                 <img src="./../images/Message.png" alt="" />
-                <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-2">
+                <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-sm-2 mt-2 mt-sm-0">
                   contact@tugaut-tp.com
                 </span>
               </div>
-              <div className="d-flex align-items-center">
+              <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start footer__contact-item">
                 <img src="./../images/Call.png" alt="" />
-                <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-2">
+                <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-sm-2 mt-2 mt-sm-0">
                   +33 6 12 34 56 78
                 </span>
               </div>
@@ -116,7 +116,7 @@ const Footer = (props) => {
             </button>
           </div> */}
         </div>
-        <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-5">
+        <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-4 mt-md-5">
           Copyright Tugaut TP. 2025 All Right Reserved
         </div>
       </div>
