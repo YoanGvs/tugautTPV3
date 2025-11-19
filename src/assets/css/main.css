@@ -4518,7 +4518,7 @@ h5 {
 }
 .wrapper__navbar-menu ul li a[aria-current=page] {
   opacity: 1;
-  color: #ffffff !important;
+  color: #EA6B00 !important;
 }
 .wrapper__navbar-menu ul li a[aria-current=page]::after {
   opacity: 1;

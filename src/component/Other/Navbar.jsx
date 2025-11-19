@@ -1,12 +1,38 @@
-import React, { Fragment } from "react";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Fragment, useMemo, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = (props) => {
   const [toogleMenu, setToogleMenu] = useState(false);
+  const location = useLocation();
 
-  const navLinkStyle = ({ isActive }) =>
-    isActive ? { color: "#EA6B00", opacity: 1 } : {};
+  const navItems = useMemo(
+    () => [
+      { path: "/", label: "Accueil", end: true },
+      { path: "/about", label: "À propos" },
+      { path: "/service", label: "Service" },
+      { path: "/contact", label: "Nous contacter" },
+    ],
+    []
+  );
+
+  const isActivePath = (path, end = false) => {
+    if (end) {
+      return location.pathname === path;
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  const mobileLinkClass = (item) =>
+    `medium font__size--14 text__14-1024 ${
+      isActivePath(item.path, item.end) ? "color__orange" : "color__white"
+    }`;
+
+  const desktopLinkClass = (item) =>
+    `nav-link semi-bold font__size--14 text__14-1024 text-uppercase hover ${
+      isActivePath(item.path, item.end)
+        ? "color__orange"
+        : "color__white opacity__7"
+    }`;
 
   return (
     <Fragment>
@@ -34,38 +60,18 @@ const Navbar = (props) => {
               />
             </div>
             <div className="menu">
-              <NavLink
-                to="/"
-                end
-                className="medium font__size--14 text__14-1024 color__white"
-                style={navLinkStyle}
-              >
-                Accueil
-              </NavLink>
-              <hr />
-              <NavLink
-                to="/about"
-                className="medium font__size--14 text__14-1024 color__white"
-                style={navLinkStyle}
-              >
-                À propos
-              </NavLink>
-              <hr />
-              <NavLink
-                to="/service"
-                className="medium font__size--14 text__14-1024 color__white"
-                style={navLinkStyle}
-              >
-                Service
-              </NavLink>
-              <hr />
-              <NavLink
-                to="/contact"
-                className="medium font__size--14 text__14-1024 color__white"
-                style={navLinkStyle}
-              >
-                Nous contacter
-              </NavLink>
+              {navItems.map((item, index) => (
+                <Fragment key={item.path}>
+                  <NavLink
+                    to={item.path}
+                    end={item.end}
+                    className={mobileLinkClass(item)}
+                  >
+                    {item.label}
+                  </NavLink>
+                  {index < navItems.length - 1 && <hr />}
+                </Fragment>
+              ))}
             </div>
           </div>
         </div>
@@ -94,43 +100,17 @@ const Navbar = (props) => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav menu__center">
-              <li className="nav-item">
-                <NavLink
-                  to="/"
-                  end
-                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
-                  style={navLinkStyle}
-                >
-                  Accueil
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
-                  style={navLinkStyle}
-                >
-                  À propos
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/service"
-                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
-                  style={navLinkStyle}
-                >
-                  Service
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/contact"
-                  className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
-                  style={navLinkStyle}
-                >
-                  Nous contacter
-                </NavLink>
-              </li>
+              {navItems.map((item) => (
+                <li className="nav-item" key={item.path}>
+                  <NavLink
+                    to={item.path}
+                    end={item.end}
+                    className={desktopLinkClass(item)}
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
 

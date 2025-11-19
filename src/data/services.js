@@ -80,26 +80,22 @@ const services = [
       "Nous intégrons également les réseaux d’éclairage, les bordures et les dispositifs de gestion des eaux pluviales pour offrir un extérieur fonctionnel et facile à entretenir.",
     ],
     quote:
-      "Un aménagement extérieur bien pensé améliore immédiatement l’image de votre site et augmente la valeur du patrimoine.",
+      "Un aménagement extérieur bien pensé améliore votre confort de vie et valorise votre bien.",
     highlights: [
       {
         title: "Design sur mesure",
-        text: "Propositions de textures, teintes et calepinages alignés sur votre identité visuelle.",
+        text: "Propositions de matériaux (enrobé, pavé, gravillon, etc.).",
       },
       {
         title: "Finitions soignées",
-        text: "Pose des bordures, joints et raccords précis pour éviter fissures et soulèvements.",
+        text: "Pose des bordures, joints et raccords précis",
       },
       {
         title: "Gestion des eaux pluviales",
-        text: "Implantation de caniveaux, grilles et noues pour éviter les flaques et l’érosion.",
+        text: "Implantation de caniveaux pour éviter les flaques et l’érosion.",
       },
     ],
-    deliverables: [
-      "Plan d’exécution et choix matériaux validés",
-      "Guide d’entretien des revêtements",
-      "Suivi photo avant/après pour vos communications",
-    ],
+    deliverables: ["Plan d’exécution et choix matériaux validés"],
   },
   {
     slug: "demolition",
@@ -110,16 +106,12 @@ const services = [
     intro:
       "Nous sécurisons vos chantiers de démolition partielle ou totale en coordonnant les études, la déconstruction et la gestion des déchets.",
     content: [
-      "Chaque intervention démarre par un diagnostic structurel et déchets, suivi d’un plan de prévention pour protéger les riverains et les équipes. Nous installons les confinements nécessaires, procédons au curage sélectif puis à la dépose mécanique ou manuelle selon les contraintes.",
+      "Chaque intervention démarre par un diagnostic structurel et déchets, suivi d’un plan de prévention pour protéger les riverains et les équipes. Nous installons les équipements nécessaires, procédons à la dépose mécanique ou manuelle selon les contraintes, puis à la valorisations des déchets",
       "Les matériaux sont triés et évacués vers des filières agréées. Le site est livré propre, prêt à accueillir un nouveau projet ou à être remis en état naturel.",
     ],
     quote:
       "La maîtrise des risques et la traçabilité des déchets sont au cœur de nos chantiers de démolition.",
     highlights: [
-      {
-        title: "Études préalables",
-        text: "Diagnostics amiante, plomb et solidité pour structurer le plan d’intervention.",
-      },
       {
         title: "Déconstruction contrôlée",
         text: "Méthodes manuelles ou mécaniques adaptées à l’environnement urbain ou rural.",
@@ -129,11 +121,7 @@ const services = [
         text: "Tri sélectif, pesées et bordereaux pour assurer la conformité réglementaire.",
       },
     ],
-    deliverables: [
-      "Plan de retrait et PPSPS",
-      "Bordereaux de suivi des déchets (BSD)",
-      "Rapport de fin de travaux avec nivellement du terrain",
-    ],
+    deliverables: ["Rapport de fin de travaux avec nivellement du terrain"],
   },
   {
     slug: "location-de-benne",
@@ -145,26 +133,21 @@ const services = [
       "Nous mettons à disposition des bennes adaptées à vos flux : gravats, déchets inertes, DIB ou déchets verts.",
     content: [
       "Nos conseillers dimensionnent la benne selon le volume réel et la nature des matériaux pour éviter les rotations inutiles. Nous gérons les autorisations de voirie si nécessaire et planifions les enlèvements au plus près de vos besoins.",
-      "Les déchets sont transportés vers des centres agréés et chaque rotation est tracée pour faciliter votre reporting environnemental.",
+      "Les déchets sont transportés vers des centres agréés.",
     ],
     quote:
-      "Une logistique fluide des déchets améliore la sécurité du chantier et maîtrise vos coûts.",
+      "Une logistique fluide des déchets améliore la sécurité du chantier.",
     highlights: [
       {
         title: "Capacités variées",
-        text: "De 10 à 30 m³ pour répondre à tous les types de chantiers et de déchets.",
+        text: "De 10 à 30 m³ pour répondre à tous les types de chantiers.",
       },
       {
         title: "Souplesse de collecte",
         text: "Livraison express, rotation programmée ou à la demande selon l’avancement.",
       },
-      {
-        title: "Traçabilité",
-        text: "Fourniture des bordereaux réglementaires pour vos audits environnementaux.",
-      },
     ],
     deliverables: [
-      "Contrat de location avec planning des rotations",
       "Bordereaux de suivi pour chaque tonnage",
       "Recommandations de tri pour optimiser vos coûts",
     ],
@@ -178,23 +161,22 @@ const services = [
     intro:
       "Bénéficiez d’opérateurs expérimentés et d’un parc d’engins entretenus pour sécuriser vos travaux de terrassement, fouilles ou manutentions lourdes.",
     content: [
-      "Nous proposons des pelles sur chenilles ou sur pneus, de 8 à 25 tonnes, équipées des accessoires nécessaires (godets, BRH, pinces). Nos chauffeurs travaillent selon vos procédures QSE et s’intègrent facilement à vos équipes.",
-      "Chaque mission inclut la maintenance préventive, le carburant et les assurances adaptées. Vous gardez ainsi la maîtrise de votre planning sans immobiliser de capital.",
+      "Nous proposons des pelles à chenilles, de 800kg à 8 tonnes, équipées des accessoires nécessaires (godets, BRH, pinces, cailleur rotatif). Nos chauffeurs travaillent selon vos procédures QSE et s’intègrent facilement à vos équipes.",
     ],
     quote:
       "Un conducteur qualifié augmente la productivité et réduit l’usure de vos chantiers sensibles.",
     highlights: [
       {
         title: "Opérateurs certifiés",
-        text: "CACES à jour, culture sécurité et expérience multi-chantiers.",
+        text: "CACES à jour expérience multi-chantiers.",
       },
       {
         title: "Parc entretenu",
-        text: "Machines récentes, suivies par notre atelier pour limiter les arrêts.",
+        text: "Machines récentes, suivies des maintenance et contrôle périodique valide.",
       },
       {
         title: "Contrats flexibles",
-        text: "Location à la journée, à la semaine ou au forfait chantier.",
+        text: "Location à la journée ou demi journée.",
       },
     ],
     deliverables: [

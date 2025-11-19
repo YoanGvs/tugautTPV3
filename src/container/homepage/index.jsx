@@ -54,7 +54,7 @@ const Index = (props) => {
                 <p className="medium roboto font__size--16 text__16-1024 color__white my-4">
                   Entreprise familiale experte depuis plus de 12 ans,{" "}
                   <br className="d-none d-sm-block" /> nous accompagnons
-                  collectivités, entreprises et professionnels du BTP dans la
+                  collectivités, entreprises et particuliers du BTP dans la
                   réalisation de chantiers durables, maîtrisés et conformes aux
                   normes environnementales.
                 </p>

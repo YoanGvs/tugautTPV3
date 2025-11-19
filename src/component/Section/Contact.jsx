@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "@formspree/react";
 
 const formatPhoneInput = (value) => {
@@ -53,6 +54,7 @@ const Contact = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [fileError, setFileError] = useState("");
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!state.succeeded) return;
@@ -67,11 +69,11 @@ const Contact = () => {
     }
 
     const redirectTimeout = setTimeout(() => {
-      window.location.assign("/merci");
+      navigate("/merci");
     }, 800);
 
     return () => clearTimeout(redirectTimeout);
-  }, [state.succeeded]);
+  }, [state.succeeded, navigate]);
 
   const validateField = (field, value) => {
     switch (field) {
@@ -84,9 +86,7 @@ const Contact = () => {
           ? "Adresse e-mail invalide."
           : "Adresse e-mail invalide.";
       case "phone":
-        return isPhoneValid(value)
-          ? ""
-          : "Numéro de téléphone invalide.";
+        return isPhoneValid(value) ? "" : "Numéro de téléphone invalide.";
       case "projectType":
         return value ? "" : "Sélectionnez un type de projet.";
       case "city":
@@ -176,7 +176,7 @@ const Contact = () => {
               contact us
             </p>
             <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs color__white text-uppercase mb-4">
-              Prêt à lancer votre chantier ?
+              Un projet ? Contactez-nous
             </h3>
             <p className="roboto normal font__size--16 text__16-1024 color__white">
               Faites appel à une équipe locale expérimentée, à l’écoute de vos
