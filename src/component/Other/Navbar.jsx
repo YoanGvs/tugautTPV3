@@ -1,10 +1,12 @@
-import React, { Component, Fragment } from "react";
-import { useEffect } from "react";
+import React, { Fragment } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
   const [toogleMenu, setToogleMenu] = useState(false);
+
+  const navLinkStyle = ({ isActive }) =>
+    isActive ? { color: "#EA6B00", opacity: 1 } : {};
 
   return (
     <Fragment>
@@ -34,8 +36,9 @@ const Navbar = (props) => {
             <div className="menu">
               <NavLink
                 to="/"
-                exact
+                end
                 className="medium font__size--14 text__14-1024 color__white"
+                style={navLinkStyle}
               >
                 Accueil
               </NavLink>
@@ -43,6 +46,7 @@ const Navbar = (props) => {
               <NavLink
                 to="/about"
                 className="medium font__size--14 text__14-1024 color__white"
+                style={navLinkStyle}
               >
                 À propos
               </NavLink>
@@ -50,6 +54,7 @@ const Navbar = (props) => {
               <NavLink
                 to="/service"
                 className="medium font__size--14 text__14-1024 color__white"
+                style={navLinkStyle}
               >
                 Service
               </NavLink>
@@ -57,6 +62,7 @@ const Navbar = (props) => {
               <NavLink
                 to="/contact"
                 className="medium font__size--14 text__14-1024 color__white"
+                style={navLinkStyle}
               >
                 Nous contacter
               </NavLink>
@@ -91,8 +97,9 @@ const Navbar = (props) => {
               <li className="nav-item">
                 <NavLink
                   to="/"
-                  exact
+                  end
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
+                  style={navLinkStyle}
                 >
                   Accueil
                 </NavLink>
@@ -101,6 +108,7 @@ const Navbar = (props) => {
                 <NavLink
                   to="/about"
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
+                  style={navLinkStyle}
                 >
                   À propos
                 </NavLink>
@@ -109,6 +117,7 @@ const Navbar = (props) => {
                 <NavLink
                   to="/service"
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
+                  style={navLinkStyle}
                 >
                   Service
                 </NavLink>
@@ -117,6 +126,7 @@ const Navbar = (props) => {
                 <NavLink
                   to="/contact"
                   className="nav-link semi-bold font__size--14 text__14-1024 color__white opacity__7 text-uppercase hover"
+                  style={navLinkStyle}
                 >
                   Nous contacter
                 </NavLink>
