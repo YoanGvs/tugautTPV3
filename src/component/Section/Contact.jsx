@@ -183,15 +183,17 @@ const Contact = () => {
               besoins, qui comprend vos contraintes et assure un suivi rigoureux
               à chaque étape de votre projet.
             </p>
-            <div className="mt-4 d-none d-lg-block">
+              <div className="mt-4 d-none d-lg-block">
               <div className="ratio ratio-4x3 rounded overflow-hidden shadow">
                 <iframe
                   title="TUGAUT TP localisation"
-                  src="https://maps.google.com/maps?q=162%20Rue%20des%20Cerisiers%20Roussel%2C%2060700%20Pontpoint&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.197972965726!2d2.6770133758687593!3d49.31053436878243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e632fc555220af%3A0x4cda2140a959c447!2sTugaut%20tp!5e0!3m2!1sfr!2sfr!4v1764346960590!5m2!1sfr!2sfr"
                   width="600"
                   height="450"
-                  loading="lazy"
+                  style={{ border: 0 }}
                   allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
             </div>
