@@ -82,13 +82,13 @@ const Index = (props) => {
 
         <Service
           service={featuredServices}
-          backgroundColor="#EA6B00"
+          backgroundColor="#ff5e14"
           titleColor="#FFFFFF"
         />
 
         <Step />
 
-        <Testimonial backgroundColor="#EA6B00" titleColor="#FFFFFF" />
+        <Testimonial backgroundColor="#ff5e14" titleColor="#FFFFFF" />
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">
