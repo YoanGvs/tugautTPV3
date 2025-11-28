@@ -1,5 +1,51 @@
 import React from "react";
 
+const STAR_COUNT = 5;
+
+const reviews = [
+  {
+    name: "Maida Bleriot",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a une semaine",
+    message:
+      "Parfait. Rien a dire, une équipe professionnelle. Foncez sans hésiter, je leurs donne une confiance aveugle suite à la réalisation des travaux chez moi.",
+  },
+  {
+    name: "Charlène GUELLI",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a une semaine",
+    message:
+      "Société à l’écoute de son client et qui sait ce qu’elle fait ! Merci pour votre réalisation ! Très bon travail !",
+  },
+  {
+    name: "Natacha Lefebvre",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a un an",
+    message:
+      "Personnel très compétente, un homme au grand cœur qui adore son travail, secrétaire attentive à la demande. Beau travail. Merci les Tugaut je recommande.",
+  },
+  {
+    name: "Sophie ELINGUEL LEVOIR",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a 2 ans",
+    message:
+      "Super équipe ayant réalisée plusieurs travaux chez nous. Très professionnel et très bon rapport qualité prix.",
+  },
+  {
+    name: "Emmanuel villez-mognier",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a 5 ans",
+    message:
+      "Très professionnel Laurent et Anne, une très bonne équipe, très bon rapport qualité prix. Je recommande cette entreprise.",
+  },
+  {
+    name: "Alaster The Mad",
+    platform: "Avis de Google",
+    ratingText: "5/5 · il y a 8 mois",
+    message: "Belle équipe efficace !",
+  },
+];
+
 const Testimonial = ({ backgroundColor, titleColor }) => {
   const sectionStyle = backgroundColor ? { backgroundColor } : undefined;
   const titleStyle = titleColor ? { color: titleColor } : undefined;
@@ -17,84 +63,49 @@ const Testimonial = ({ backgroundColor, titleColor }) => {
           >
             ce que disent nos clients
           </h3>
-          {/* <p className="normal font__size--16 color__gray-1 roboto">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis{" "}
-            <br className="d-none d-md-block" /> enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p> */}
         </div>
 
         <div className="row justify-content-center mb-5">
           <div className="col-xl-11">
             <div className="row">
-              <div className="col-lg-6 mb-4 mb-lg-0">
-                <div className="wrapper__card-testimonial">
-                  <div className="d-flex align-items-start flex-wrap flex-sm-nowrap">
-                    <img
-                      src="./../images/Rectangle 2.png"
-                      className="img"
-                      alt=""
-                    />
-                    <div className="ms-sm-4 mt-4 mt-sm-0">
-                      <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
-                        Arlene Mccoy
-                      </h5>
-                      <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-3">
-                        -sm@b mb-1rooklysim
-                      </p>
-
+              {reviews.map((review) => (
+                <div className="col-lg-6 mb-4" key={review.name}>
+                  <div className="wrapper__card-testimonial">
+                    <div className="d-flex flex-column">
+                      <div className="mb-2">
+                        <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
+                          {review.name}
+                        </h5>
+                        <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
+                          {review.platform}
+                        </p>
+                      </div>
+                      <div className="d-flex align-items-center mb-2">
+                        <div className="d-flex me-2" aria-hidden="true">
+                          {Array.from({ length: STAR_COUNT }).map((_, idx) => (
+                            <span
+                              key={idx}
+                              className="text-warning"
+                              style={{ lineHeight: 1 }}
+                            >
+                              &#9733;
+                            </span>
+                          ))}
+                        </div>
+                        <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
+                          {review.ratingText}
+                        </p>
+                      </div>
                       <p className="normal font__size--16 color__gray-1 roboto mb-0">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit. Exercitation veniam consequat sunt nostrud
-                        amet.
+                        {review.message}
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="wrapper__card-testimonial">
-                  <div className="d-flex align-items-start flex-wrap flex-sm-nowrap">
-                    <img
-                      src="./../images/Rectangle 2 (1).png"
-                      className="img"
-                      alt=""
-                    />
-                    <div className="ms-sm-4 mt-4 mt-sm-0">
-                      <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
-                        maroon 3
-                      </h5>
-                      <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-sm-3 mb-1">
-                        @marmar
-                      </p>
-
-                      <p className="normal font__size--16 color__gray-1 roboto mb-0">
-                        Amet minim mollit non deserunt ullamco est sit aliqua
-                        dolor do amet sint. Velit officia consequat duis enim
-                        velit mollit. Exercitation veniam consequat sunt nostrud
-                        amet.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-
-        {/* <div className="row justify-content-center">
-          <div className="col-xl-10">
-            <div className="wrapper__brand-testimonial d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-lg-between justify-content-center">
-              <img src="./../images/8.png" alt="" />
-              <img src="./../images/1.png" alt="" />
-              <img src="./../images/6.png" alt="" />
-              <img src="./../images/7.png" alt="" />
-              <img src="./../images/8.png" alt="" />
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );
