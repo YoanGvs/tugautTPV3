@@ -21,6 +21,27 @@
   border: 0;
 }
 
+.animate-fade-up {
+  animation: heroFadeUp 0.9s ease-out both;
+  animation-delay: var(--fade-delay, 0s);
+}
+
+.animate-delay-1 {
+  --fade-delay: 0.08s;
+}
+
+.animate-delay-2 {
+  --fade-delay: 0.16s;
+}
+
+.animate-delay-3 {
+  --fade-delay: 0.24s;
+}
+
+.animate-delay-4 {
+  --fade-delay: 0.32s;
+}
+
 .hero__title-animate {
   animation: heroFadeUp 0.9s ease-out both;
 }

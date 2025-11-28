@@ -95,14 +95,16 @@ const Index = (props) => {
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">
-            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
+            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
               Nos projets
             </p>
-            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase">
+            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase animate-fade-up animate-delay-1">
               Chantiers réalisés
             </h3>
           </div>
-          <SliderConstruction />
+          <div className="animate-fade-up animate-delay-2">
+            <SliderConstruction />
+          </div>
         </section>
 
         {/* <Blog blog={blog} title={"news & articles"} top={"latest blog"} /> */}

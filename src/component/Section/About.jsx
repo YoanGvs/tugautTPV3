@@ -6,20 +6,20 @@ const About = () => {
     <section>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-md-5 mb-4 my-md-auto">
+          <div className="col-md-5 mb-4 my-md-auto animate-fade-up animate-delay-1">
             <img src="./../images/Images.png" className="w-100" alt="" />
           </div>
           <div className="col-md-7 col-lg-6 my-auto ps-lg-5">
-            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
+            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
               A Propos
             </p>
-            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase">
+            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase animate-fade-up animate-delay-1">
               notre promesse
             </h3>
-            <p className="roboto semi-bold font__size--16 text__16-1024">
+            <p className="roboto semi-bold font__size--16 text__16-1024 animate-fade-up animate-delay-2">
               Fiabilité, réactivité et savoir-faire au service de vos chantiers.
             </p>
-            <p className="roboto normal font__size--16 text__16-1024 color__gray-1">
+            <p className="roboto normal font__size--16 text__16-1024 color__gray-1 animate-fade-up animate-delay-3">
               Basée à Pontpoint (60), TUGAUT TP intervient sur tout le
               département de l’Oise et les zones voisines (Aisne, Val-d’Oise,
               Seine-et-Marne). Nous mettons notre expertise technique et nos
@@ -32,7 +32,7 @@ const About = () => {
             </p> */}
             <NavLink
               to="/contact"
-              className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"
+              className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase animate-fade-up animate-delay-4"
             >
               contactez-nous
             </NavLink>

@@ -55,7 +55,7 @@ const Testimonial = ({ sectionClassName, titleClassName }) => {
     >
       <div className="container">
         <div className="text-center mb-5">
-          <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
+          <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
             AVIS
           </p>
           <h3
@@ -64,7 +64,7 @@ const Testimonial = ({ sectionClassName, titleClassName }) => {
               titleClassName,
             ]
               .filter(Boolean)
-              .join(" ")}
+              .join(" ") + " animate-fade-up animate-delay-1"}
           >
             ce que disent nos clients
           </h3>
@@ -73,40 +73,54 @@ const Testimonial = ({ sectionClassName, titleClassName }) => {
         <div className="row justify-content-center mb-5">
           <div className="col-xl-11">
             <div className="row">
-              {reviews.map((review) => (
-                <div className="col-lg-6 mb-4" key={review.name}>
-                  <div className="wrapper__card-testimonial">
-                    <div className="d-flex flex-column">
-                      <div className="mb-2">
-                        <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
-                          {review.name}
-                        </h5>
-                        <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
-                          {review.platform}
-                        </p>
-                      </div>
-                      <div className="d-flex align-items-center mb-2">
-                        <div
-                          className="d-flex me-2 testimonial__stars"
-                          aria-hidden="true"
-                        >
-                          {Array.from({ length: STAR_COUNT }).map((_, idx) => (
-                            <span key={idx} className="text-warning">
-                              &#9733;
-                            </span>
-                          ))}
+              {reviews.map((review, index) => {
+                const delayClass =
+                  index % 3 === 1
+                    ? "animate-delay-1"
+                    : index % 3 === 2
+                    ? "animate-delay-2"
+                    : "";
+
+                return (
+                  <div
+                    className={["col-lg-6 mb-4 animate-fade-up", delayClass]
+                      .filter(Boolean)
+                      .join(" ")}
+                    key={review.name}
+                  >
+                    <div className="wrapper__card-testimonial">
+                      <div className="d-flex flex-column">
+                        <div className="mb-2">
+                          <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
+                            {review.name}
+                          </h5>
+                          <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
+                            {review.platform}
+                          </p>
                         </div>
-                        <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
-                          {review.ratingText}
+                        <div className="d-flex align-items-center mb-2">
+                          <div
+                            className="d-flex me-2 testimonial__stars"
+                            aria-hidden="true"
+                          >
+                            {Array.from({ length: STAR_COUNT }).map((_, idx) => (
+                              <span key={idx} className="text-warning">
+                                &#9733;
+                              </span>
+                            ))}
+                          </div>
+                          <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
+                            {review.ratingText}
+                          </p>
+                        </div>
+                        <p className="normal font__size--16 color__gray-1 roboto mb-0">
+                          {review.message}
                         </p>
                       </div>
-                      <p className="normal font__size--16 color__gray-1 roboto mb-0">
-                        {review.message}
-                      </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

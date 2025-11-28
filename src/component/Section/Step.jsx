@@ -6,14 +6,14 @@ const Step = () => {
       <div className="container">
         <div className="row">
           <div className="order-12 order-md-1 col-md-6 my-auto pe-lg-5">
-            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
+            <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
               comment nous travaillons ?
             </p>
-            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4">
+            <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4 animate-fade-up animate-delay-1">
               Pourquoi choisir TUGAUT TP ?
             </h3>
 
-            <div className="d-flex align-items-start">
+            <div className="d-flex align-items-start animate-fade-up animate-delay-2">
               <img
                 src="./../images/consulting.png"
                 className="object-fit-content"
@@ -30,7 +30,7 @@ const Step = () => {
                 </p>
               </div>
             </div>
-            <div className="d-flex align-items-start my-4">
+            <div className="d-flex align-items-start my-4 animate-fade-up animate-delay-3">
               <img
                 src="./../images/planning.png"
                 className="object-fit-content"
@@ -47,7 +47,7 @@ const Step = () => {
                 </p>
               </div>
             </div>
-            <div className="d-flex align-items-start">
+            <div className="d-flex align-items-start animate-fade-up animate-delay-4">
               <img
                 src="./../images/checking.png"
                 className="object-fit-content"
@@ -65,7 +65,7 @@ const Step = () => {
               </div>
             </div>
           </div>
-          <div className="order-md-12 order-1 mb-4 col-md-6 col-lg-5 my-md-auto text-right">
+          <div className="order-md-12 order-1 mb-4 col-md-6 col-lg-5 my-md-auto text-right animate-fade-up animate-delay-2">
             <img src="./../images/sdsadas.png" className="w-100" alt="" />
           </div>
         </div>

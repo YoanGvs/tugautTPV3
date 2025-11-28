@@ -11,7 +11,7 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
     >
       <div className="container">
         <div className="text-center mb-5">
-          <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
+          <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
             service
           </p>
           <h3
@@ -20,7 +20,7 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
               titleClassName,
             ]
               .filter(Boolean)
-              .join(" ")}
+              .join(" ") + " animate-fade-up animate-delay-1"}
           >
             Nos services
           </h3>
@@ -29,7 +29,7 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
         <div className="row mb-5">
           {service.map((obj) => {
             return (
-              <div className="col-lg-4 mb-4">
+              <div className="col-lg-4 mb-4 animate-fade-up animate-delay-2">
                 <CardSevice data={obj} />
               </div>
             );
@@ -37,7 +37,7 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
         </div>
 
         {type != "service" ? (
-          <div className="text-center">
+          <div className="text-center animate-fade-up animate-delay-3">
             <div className="d-inline-block">
               <NavLink
                 to="/service"
