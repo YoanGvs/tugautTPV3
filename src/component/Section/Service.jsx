@@ -2,20 +2,25 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CardSevice from "../Card/CardSevice";
 
-const Service = ({ service, type, backgroundColor, titleColor }) => {
-  const sectionStyle = backgroundColor ? { backgroundColor } : undefined;
-  const titleStyle = titleColor ? { color: titleColor } : undefined;
-
+const Service = ({ service, type, sectionClassName, titleClassName }) => {
   return (
-    <section style={sectionStyle}>
+    <section
+      className={["wrapper__section-service", sectionClassName]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="container">
         <div className="text-center mb-5">
           <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
             service
           </p>
           <h3
-            className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase"
-            style={titleStyle}
+            className={[
+              "bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase",
+              titleClassName,
+            ]
+              .filter(Boolean)
+              .join(" ")}
           >
             Nos services
           </h3>

@@ -411,6 +411,16 @@
     transform: rotate(0deg);
   }
 }
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -3259,6 +3269,25 @@ h5 {
 }
 .wrapper__slider-construction-fade {
   display: none;
+}
+.section--orange {
+  background-color: #ff5e14;
+}
+.section__title--white {
+  color: #fff;
+}
+.testimonial__stars {
+  line-height: 1;
+}
+.map-embed {
+  border: 0;
+}
+.hero__title-animate {
+  animation: heroFadeUp 0.9s ease-out both;
+}
+.hero__subtitle-animate {
+  animation: heroFadeUp 1s ease-out both;
+  animation-delay: 0.08s;
 }
 .wrapper__card-service {
   background-color: white;

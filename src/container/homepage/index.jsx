@@ -47,11 +47,11 @@ const Index = (props) => {
           <section className="position-relative z-2">
             <div className="container">
               <div className="text-center">
-                <h1 className="semi-bold font__size--90 text__90-1024 text__90-md text__90-sm text__90-xs  color__white text-uppercase mb-0">
+                <h1 className="semi-bold font__size--90 text__90-1024 text__90-md text__90-sm text__90-xs  color__white text-uppercase mb-0 hero__title-animate">
                   TUGAUT TP <br className="d-none d-sm-block" />
                   terrassement et assainissement dans l’Oise
                 </h1>
-                <p className="medium roboto font__size--16 text__16-1024 color__white my-4">
+                <p className="medium roboto font__size--16 text__16-1024 color__white my-4 hero__subtitle-animate">
                   Entreprise familiale experte depuis plus de 12 ans,{" "}
                   <br className="d-none d-sm-block" /> nous accompagnons
                   collectivités, entreprises et particuliers du BTP dans la
@@ -82,13 +82,16 @@ const Index = (props) => {
 
         <Service
           service={featuredServices}
-          backgroundColor="#ff5e14"
-          titleColor="#FFFFFF"
+          sectionClassName="section--orange"
+          titleClassName="section__title--white"
         />
 
         <Step />
 
-        <Testimonial backgroundColor="#ff5e14" titleColor="#FFFFFF" />
+        <Testimonial
+          sectionClassName="section--orange"
+          titleClassName="section__title--white"
+        />
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">

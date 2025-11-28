@@ -5,6 +5,31 @@
 .section {
 }
 
+.section--orange {
+  background-color: color("orange");
+}
+
+.section__title--white {
+  color: #fff;
+}
+
+.testimonial__stars {
+  line-height: 1;
+}
+
+.map-embed {
+  border: 0;
+}
+
+.hero__title-animate {
+  animation: heroFadeUp 0.9s ease-out both;
+}
+
+.hero__subtitle-animate {
+  animation: heroFadeUp 1s ease-out both;
+  animation-delay: 0.08s;
+}
+
 .wrapper {
   &__card-team {
     padding: 1rem;
