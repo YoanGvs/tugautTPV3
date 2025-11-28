@@ -382,6 +382,27 @@
       }
     }
   }
+  &__slider-construction-marquee {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 12%,
+      #000 88%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 12%,
+      #000 88%,
+      transparent 100%
+    );
+  }
+  &__slider-construction-fade {
+    display: none;
+  }
   &__card-service {
     background-color: white;
     box-shadow: 0px 4px 46px 0px #131b2d26;
