@@ -51,6 +51,41 @@
   animation-delay: 0.08s;
 }
 
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+
+  &.is-visible {
+    animation: heroFadeUp 0.9s ease-out both;
+    animation-delay: var(--fade-delay, 0s);
+  }
+}
+
+.animate-delay-1 {
+  --fade-delay: 0.08s;
+}
+
+.animate-delay-2 {
+  --fade-delay: 0.16s;
+}
+
+.animate-delay-3 {
+  --fade-delay: 0.24s;
+}
+
+.animate-delay-4 {
+  --fade-delay: 0.32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
 .wrapper {
   &__card-team {
     padding: 1rem;

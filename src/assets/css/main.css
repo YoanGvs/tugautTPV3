@@ -3290,6 +3290,11 @@ h5 {
   animation-delay: 0.08s;
 }
 .animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+.animate-fade-up.is-visible {
   animation: heroFadeUp 0.9s ease-out both;
   animation-delay: var(--fade-delay, 0s);
 }
@@ -3304,6 +3309,13 @@ h5 {
 }
 .animate-delay-4 {
   --fade-delay: 0.32s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }
 .wrapper__card-service {
   background-color: white;
