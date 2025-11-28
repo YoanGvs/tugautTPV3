@@ -6,42 +6,42 @@ const reviews = [
   {
     name: "Maida Bleriot",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a une semaine",
+    ratingText: "5/5 ",
     message:
       "Parfait. Rien a dire, une équipe professionnelle. Foncez sans hésiter, je leurs donne une confiance aveugle suite à la réalisation des travaux chez moi.",
   },
   {
     name: "Charlène GUELLI",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a une semaine",
+    ratingText: "5/5 ",
     message:
       "Société à l’écoute de son client et qui sait ce qu’elle fait ! Merci pour votre réalisation ! Très bon travail !",
   },
   {
     name: "Natacha Lefebvre",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a un an",
+    ratingText: "5/5 ",
     message:
       "Personnel très compétente, un homme au grand cœur qui adore son travail, secrétaire attentive à la demande. Beau travail. Merci les Tugaut je recommande.",
   },
   {
     name: "Sophie ELINGUEL LEVOIR",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 2 ans",
+    ratingText: "5/5 ",
     message:
       "Super équipe ayant réalisée plusieurs travaux chez nous. Très professionnel et très bon rapport qualité prix.",
   },
   {
     name: "Emmanuel villez-mognier",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 5 ans",
+    ratingText: "5/5 ",
     message:
       "Très professionnel Laurent et Anne, une très bonne équipe, très bon rapport qualité prix. Je recommande cette entreprise.",
   },
   {
     name: "Alaster The Mad",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 8 mois",
+    ratingText: "5/5 ",
     message: "Belle équipe efficace !",
   },
 ];

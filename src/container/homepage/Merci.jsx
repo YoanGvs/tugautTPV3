@@ -30,9 +30,9 @@ const Merci = () => {
                 </h1>
                 <p className="roboto normal font__size--18 text__18-1024 color__gray-1 mb-5">
                   Notre équipe TUGAUT TP vient de recevoir votre demande de
-                  devis. Nous revenons vers vous sous 24&nbsp;heures ouvrées pour
-                  préciser votre projet et planifier la prochaine étape. Pour
-                  toute question urgente, contactez-nous au&nbsp;
+                  devis. Nous revenons vers vous pour préciser votre projet et
+                  planifier la prochaine étape. Pour toute question urgente,
+                  contactez-nous au&nbsp;
                   <a href="tel:+33612345678" className="color__orange fw-bold">
                     06 12 34 56 78
                   </a>
