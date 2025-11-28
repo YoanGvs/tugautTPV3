@@ -80,11 +80,15 @@ const Index = (props) => {
 
         <About />
 
+        <Service
+          service={featuredServices}
+          backgroundColor="#EA6B00"
+          titleColor="#FFFFFF"
+        />
+
         <Step />
 
-        <Service service={featuredServices} />
-
-        <Testimonial />
+        <Testimonial backgroundColor="#EA6B00" titleColor="#FFFFFF" />
 
         <section className="overflow-hidden">
           <div className="text-center mb-5">

@@ -1,14 +1,20 @@
 import React from "react";
 
-const Testimonial = () => {
+const Testimonial = ({ backgroundColor, titleColor }) => {
+  const sectionStyle = backgroundColor ? { backgroundColor } : undefined;
+  const titleStyle = titleColor ? { color: titleColor } : undefined;
+
   return (
-    <section>
+    <section style={sectionStyle}>
       <div className="container">
         <div className="text-center mb-5">
           <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
             AVIS
           </p>
-          <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4">
+          <h3
+            className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4"
+            style={titleStyle}
+          >
             ce que disent nos clients
           </h3>
           {/* <p className="normal font__size--16 color__gray-1 roboto">
@@ -78,7 +84,7 @@ const Testimonial = () => {
           </div>
         </div>
 
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="wrapper__brand-testimonial d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-lg-between justify-content-center">
               <img src="./../images/8.png" alt="" />
@@ -88,7 +94,7 @@ const Testimonial = () => {
               <img src="./../images/8.png" alt="" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

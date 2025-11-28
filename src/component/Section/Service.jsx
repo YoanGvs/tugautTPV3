@@ -2,21 +2,27 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CardSevice from "../Card/CardSevice";
 
-const Service = (props) => {
+const Service = ({ service, type, backgroundColor, titleColor }) => {
+  const sectionStyle = backgroundColor ? { backgroundColor } : undefined;
+  const titleStyle = titleColor ? { color: titleColor } : undefined;
+
   return (
-    <section>
+    <section style={sectionStyle}>
       <div className="container">
         <div className="text-center mb-5">
           <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
             service
           </p>
-          <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase">
+          <h3
+            className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase"
+            style={titleStyle}
+          >
             Nos services
           </h3>
         </div>
 
         <div className="row mb-5">
-          {props.service.map((obj) => {
+          {service.map((obj) => {
             return (
               <div className="col-lg-4 mb-4">
                 <CardSevice data={obj} />
@@ -25,7 +31,7 @@ const Service = (props) => {
           })}
         </div>
 
-        {props.type != "service" ? (
+        {type != "service" ? (
           <div className="text-center">
             <div className="d-inline-block">
               <NavLink
