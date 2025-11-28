@@ -16,7 +16,7 @@ const Footer = (props) => {
               conformes aux normes environnementales.{" "}
             </p>
           </div>
-          <div className="col-6 col-md-3 col-lg-3 mb-4 mb-md-0 footer__links">
+          {/*           <div className="col-6 col-md-3 col-lg-3 mb-4 mb-md-0 footer__links">
             <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3 text-center text-md-start">
               links
             </h5>
@@ -46,14 +46,14 @@ const Footer = (props) => {
                   project
                 </NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink
                   to="/news"
                   className="semi-bold font__size--14 text__14-1024 color__black text-uppercase opacity__7 hover"
                 >
                   news
                 </NavLink>
-              </li> */}
+              </li>
               <li>
                 <NavLink
                   to="/contact"
@@ -63,9 +63,9 @@ const Footer = (props) => {
                 </NavLink>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="col-12 col-md-6 col-lg-5 mb-4 mb-md-0 footer__contact text-center text-md-start">
-            {/* <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
+            <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               nos reseau sociaux
             </h5>
 
@@ -79,7 +79,7 @@ const Footer = (props) => {
               <a href="#!">
                 <img src="./../images/WA.png" alt="" />
               </a>
-            </div> */}
+            </div>
 
             <div className="mt-4 mt-md-5">
               <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3 text-center text-md-start">
@@ -99,7 +99,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          {/* <div className="col-md-4">
+          <div className="col-md-4">
             <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               subscribe
             </h5>
@@ -114,7 +114,7 @@ const Footer = (props) => {
             <button className="semi-bold font__size--14 text__14-1024 color__white text-uppercase btn btn__orange shadow rounded-0">
               send
             </button>
-          </div> */}
+          </div>
         </div>
         <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-4 mt-md-5">
           Copyright Tugaut TP. 2025 All Right Reserved

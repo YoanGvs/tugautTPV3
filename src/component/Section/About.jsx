@@ -34,7 +34,7 @@ const About = () => {
               to="/contact"
               className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"
             >
-              Have A Project
+              contactez-nous
             </NavLink>
           </div>
         </div>

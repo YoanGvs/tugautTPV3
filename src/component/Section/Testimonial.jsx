@@ -6,16 +6,17 @@ const Testimonial = () => {
       <div className="container">
         <div className="text-center mb-5">
           <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
-            testimoni
+            AVIS
           </p>
           <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4">
-            Check Our Clients Review
+            ce que disent nos clients
           </h3>
-          <p className="normal font__size--16 color__gray-1 roboto">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-            officia consequat duis <br className="d-none d-md-block" /> enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet.
-          </p>
+          {/* <p className="normal font__size--16 color__gray-1 roboto">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis{" "}
+            <br className="d-none d-md-block" /> enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p> */}
         </div>
 
         <div className="row justify-content-center mb-5">
@@ -24,7 +25,11 @@ const Testimonial = () => {
               <div className="col-lg-6 mb-4 mb-lg-0">
                 <div className="wrapper__card-testimonial">
                   <div className="d-flex align-items-start flex-wrap flex-sm-nowrap">
-                    <img src="./../images/Rectangle 2.png" className="img" alt="" />
+                    <img
+                      src="./../images/Rectangle 2.png"
+                      className="img"
+                      alt=""
+                    />
                     <div className="ms-sm-4 mt-4 mt-sm-0">
                       <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
                         Arlene Mccoy
@@ -34,9 +39,10 @@ const Testimonial = () => {
                       </p>
 
                       <p className="normal font__size--16 color__gray-1 roboto mb-0">
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                        Velit officia consequat duis enim velit mollit. Exercitation veniam
-                        consequat sunt nostrud amet.
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet.
                       </p>
                     </div>
                   </div>
@@ -45,7 +51,11 @@ const Testimonial = () => {
               <div className="col-lg-6">
                 <div className="wrapper__card-testimonial">
                   <div className="d-flex align-items-start flex-wrap flex-sm-nowrap">
-                    <img src="./../images/Rectangle 2 (1).png" className="img" alt="" />
+                    <img
+                      src="./../images/Rectangle 2 (1).png"
+                      className="img"
+                      alt=""
+                    />
                     <div className="ms-sm-4 mt-4 mt-sm-0">
                       <h5 className="emdium font__size--20 text__20-1024 text-uppercase mb-0">
                         maroon 3
@@ -55,9 +65,10 @@ const Testimonial = () => {
                       </p>
 
                       <p className="normal font__size--16 color__gray-1 roboto mb-0">
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                        Velit officia consequat duis enim velit mollit. Exercitation veniam
-                        consequat sunt nostrud amet.
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit. Exercitation veniam consequat sunt nostrud
+                        amet.
                       </p>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ const Step = () => {
         <div className="row">
           <div className="order-12 order-md-1 col-md-6 my-auto pe-lg-5">
             <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">
-              how we work
+              comment nous travaillons ?
             </p>
             <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4">
               Pourquoi choisir TUGAUT TP ?

@@ -32,7 +32,7 @@ const Service = (props) => {
                 to="/service"
                 className="semi-bold font__size--14 text__14-1024 btn btn__outlined--orange color__orange no__opacity rounded-0 shadow text-uppercase"
               >
-                explore all service
+                Nos Service
               </NavLink>
             </div>
           </div>
