@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
 
 import Homepage from "./homepage/index";
@@ -18,24 +19,60 @@ import Terms from "./homepage/Terms";
 import Privacy from "./homepage/Privacy";
 import Merci from "./homepage/Merci";
 
+const ScrollReveal = ({ children }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const targets = document.querySelectorAll(".animate-fade-up");
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      targets.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    targets.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  return children;
+};
+
 const Index = (props) => {
   return (
     <Fragment>
       <Router>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/service/detail/:slug" element={<DetailService />} />
-          <Route path="/project/detail" element={<DetailProject />} />
-          <Route path="/news/detail" element={<DetailNews />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/merci" element={<Merci />} />
-        </Routes>
+        <ScrollReveal>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/service/detail/:slug" element={<DetailService />} />
+            <Route path="/project/detail" element={<DetailProject />} />
+            <Route path="/news/detail" element={<DetailNews />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/merci" element={<Merci />} />
+          </Routes>
+        </ScrollReveal>
       </Router>
     </Fragment>
   );

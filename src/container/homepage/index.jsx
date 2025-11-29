@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useRef, useEffect } from "react";
+import React, { useState, Fragment, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../../component/Other/Footer";
 import Navbar from "../../component/Other/Navbar";
@@ -13,37 +13,6 @@ import services from "../../data/services";
 
 const Index = (props) => {
   const featuredServices = services.slice(0, 3);
-  const animateOnScrollRef = useRef(null);
-
-  useEffect(() => {
-    const targets = document.querySelectorAll(".animate-fade-up");
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) {
-      targets.forEach((el) => el.classList.add("is-visible"));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    targets.forEach((el) => observer.observe(el));
-    animateOnScrollRef.current = observer;
-
-    return () => observer.disconnect();
-  }, []);
-
   const blog = [
     {
       img: "./../images/bg (1).png",
