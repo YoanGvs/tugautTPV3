@@ -6,42 +6,42 @@ const reviews = [
   {
     name: "Maida Bleriot",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a une semaine",
+    ratingText: "5/5 ",
     message:
       "Parfait. Rien a dire, une équipe professionnelle. Foncez sans hésiter, je leurs donne une confiance aveugle suite à la réalisation des travaux chez moi.",
   },
   {
     name: "Charlène GUELLI",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a une semaine",
+    ratingText: "5/5 ",
     message:
       "Société à l’écoute de son client et qui sait ce qu’elle fait ! Merci pour votre réalisation ! Très bon travail !",
   },
   {
     name: "Natacha Lefebvre",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a un an",
+    ratingText: "5/5 ",
     message:
       "Personnel très compétente, un homme au grand cœur qui adore son travail, secrétaire attentive à la demande. Beau travail. Merci les Tugaut je recommande.",
   },
   {
     name: "Sophie ELINGUEL LEVOIR",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 2 ans",
+    ratingText: "5/5 ",
     message:
       "Super équipe ayant réalisée plusieurs travaux chez nous. Très professionnel et très bon rapport qualité prix.",
   },
   {
     name: "Emmanuel villez-mognier",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 5 ans",
+    ratingText: "5/5 ",
     message:
       "Très professionnel Laurent et Anne, une très bonne équipe, très bon rapport qualité prix. Je recommande cette entreprise.",
   },
   {
     name: "Alaster The Mad",
     platform: "Avis de Google",
-    ratingText: "5/5 · il y a 8 mois",
+    ratingText: "5/5 ",
     message: "Belle équipe efficace !",
   },
 ];
@@ -59,12 +59,14 @@ const Testimonial = ({ sectionClassName, titleClassName }) => {
             AVIS
           </p>
           <h3
-            className={[
-              "bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4",
-              titleClassName,
-            ]
-              .filter(Boolean)
-              .join(" ") + " animate-fade-up animate-delay-1"}
+            className={
+              [
+                "bold font__size--58 text__50-1024 text__50-sm text__50-xs text-uppercase mb-4",
+                titleClassName,
+              ]
+                .filter(Boolean)
+                .join(" ") + " animate-fade-up animate-delay-1"
+            }
           >
             ce que disent nos clients
           </h3>
@@ -103,11 +105,13 @@ const Testimonial = ({ sectionClassName, titleClassName }) => {
                             className="d-flex me-2 testimonial__stars"
                             aria-hidden="true"
                           >
-                            {Array.from({ length: STAR_COUNT }).map((_, idx) => (
-                              <span key={idx} className="text-warning">
-                                &#9733;
-                              </span>
-                            ))}
+                            {Array.from({ length: STAR_COUNT }).map(
+                              (_, idx) => (
+                                <span key={idx} className="text-warning">
+                                  &#9733;
+                                </span>
+                              )
+                            )}
                           </div>
                           <p className="normal font__size--12 text__12-1024 color__gray-1 roboto mb-0">
                             {review.ratingText}
