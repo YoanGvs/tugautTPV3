@@ -122,12 +122,12 @@ const Navbar = (props) => {
             <span></span>
             <span></span>
           </div>
-          <a
-            href="#!"
+          <NavLink
+            to="/contact#contact-form"
             className="d-none d-lg-block semi-bold font__size--14 btn btn__outlined--white color__white no__opacity h__black rounded-0 shadow ms-auto text-uppercase"
           >
             nous contacter
-          </a>
+          </NavLink>
         </div>
       </nav>
     </Fragment>

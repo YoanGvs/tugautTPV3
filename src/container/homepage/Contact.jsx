@@ -12,7 +12,7 @@ const Contact = () => {
                     <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
                     <div className="wrapper__bg-head"></div>
                     <Navbar />
-                    <Head default="home" current="contact us" title={"contact us"} />
+                    <Head default="home" current="contact" title={"nous contacter"} />
                 </div>
 
                 <ContactSection />

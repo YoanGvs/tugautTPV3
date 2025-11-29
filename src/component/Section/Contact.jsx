@@ -166,14 +166,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="position-relative">
+    <section className="position-relative" id="contact-form">
       <img src="/images/sdad.png" className="images__wrap-contact" alt="" />
       <div className="wrapper__bg-orange-wrap"></div>
       <div className="container position-relative z-2">
         <div className="row">
           <div className="col-md-6 mb-4 my-md-auto">
             <p className="semi-bold font__size--14 text__14-1024 color__white text-uppercase">
-              contact us
+              Nous contacter
             </p>
             <h3 className="bold font__size--58 text__50-1024 text__50-sm text__50-xs color__white text-uppercase mb-4">
               Un projet ? Contactez-nous
@@ -183,7 +183,7 @@ const Contact = () => {
               besoins, qui comprend vos contraintes et assure un suivi rigoureux
               à chaque étape de votre projet.
             </p>
-              <div className="mt-4 d-none d-lg-block">
+            <div className="mt-4 d-none d-lg-block">
               <div className="ratio ratio-4x3 rounded overflow-hidden shadow">
                 <iframe
                   className="map-embed"
