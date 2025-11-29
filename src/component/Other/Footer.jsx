@@ -71,13 +71,13 @@ const Footer = (props) => {
 
             <div className="d-flex align-items-center">
               <a href="#!">
-                <img src="./../images/FB.png" alt="" />
+                <img src="/images/FB.png" alt="" />
               </a>
               <a href="#!" className="mx-3">
-                <img src="./../images/IG.png" alt="" />
+                <img src="/images/IG.png" alt="" />
               </a>
               <a href="#!">
-                <img src="./../images/WA.png" alt="" />
+                <img src="/images/WA.png" alt="" />
               </a>
             </div>
 
@@ -86,13 +86,13 @@ const Footer = (props) => {
                 nous contacter
               </h5>
               <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start footer__contact-item mb-3">
-                <img src="./../images/Message.png" alt="" />
+                <img src="/images/Message.png" alt="" />
                 <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-sm-2 mt-2 mt-sm-0">
                   contact@tugaut-tp.com
                 </span>
               </div>
               <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start footer__contact-item">
-                <img src="./../images/Call.png" alt="" />
+                <img src="/images/Call.png" alt="" />
                 <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-sm-2 mt-2 mt-sm-0">
                   +33 6 12 34 56 78
                 </span>

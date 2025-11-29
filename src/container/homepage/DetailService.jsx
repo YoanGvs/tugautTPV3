@@ -14,7 +14,7 @@ const DetailService = () => {
     <Fragment>
       <div className="overflow-hidden">
         <div className="position-relative">
-          <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
+          <img src="/images/Bg.png" className="images__wrap-head" alt="" />
           <div className="wrapper__bg-head"></div>
           <Navbar />
           <Head
@@ -92,7 +92,7 @@ const DetailService = () => {
                         >
                           <div className="d-flex align-items-start">
                             <img
-                              src="./../images/asas.png"
+                              src="/images/asas.png"
                               className="object-fit-content mt-1"
                               alt=""
                             />
@@ -122,7 +122,7 @@ const DetailService = () => {
                         <li key={`${service.slug}-deliverable-${index}`}>
                           <div className="d-flex align-items-start">
                             <img
-                              src="./../images/asas.png"
+                              src="/images/asas.png"
                               className="object-fit-content mt-2"
                               alt=""
                             />

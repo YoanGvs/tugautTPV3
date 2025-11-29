@@ -53,7 +53,7 @@ const Navbar = (props) => {
                 TUGAUT<span className="color__orange">TP</span>
               </NavLink>
               <img
-                src="./../images/Close.png"
+                src="/images/Close.png"
                 onClick={() => setToogleMenu(!toogleMenu)}
                 className="pointer"
                 alt=""

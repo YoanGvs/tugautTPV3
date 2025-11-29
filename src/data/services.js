@@ -1,8 +1,8 @@
 const services = [
   {
     slug: "assainissement",
-    img: "./../images/Image (4).png",
-    heroImg: "./../images/Image (4).png",
+    img: "/images/Image (4).png",
+    heroImg: "/images/Image (4).png",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:
@@ -35,8 +35,8 @@ const services = [
   },
   {
     slug: "nivellement-terrassement",
-    img: "./../images/Image (5).png",
-    heroImg: "./../images/Image (5).png",
+    img: "/images/Image (5).png",
+    heroImg: "/images/Image (5).png",
     title: "Nivellement & Terrassement",
     desc: "Préparation de terrain en vue d’une construction (maison, terrasse, etc.).",
     intro:
@@ -69,8 +69,8 @@ const services = [
   },
   {
     slug: "amenagement-exterieur",
-    img: "./../images/Image (6).png",
-    heroImg: "./../images/Image (6).png",
+    img: "/images/Image (6).png",
+    heroImg: "/images/Image (6).png",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
     intro:
@@ -99,8 +99,8 @@ const services = [
   },
   {
     slug: "demolition",
-    img: "./../images/ds (1).png",
-    heroImg: "./../images/ds (1).png",
+    img: "/images/ds (1).png",
+    heroImg: "/images/ds (1).png",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
     intro:
@@ -125,8 +125,8 @@ const services = [
   },
   {
     slug: "location-de-benne",
-    img: "./../images/ds (3).png",
-    heroImg: "./../images/ds (3).png",
+    img: "/images/ds (3).png",
+    heroImg: "/images/ds (3).png",
     title: "Location de benne",
     desc: "Bennes à gravats (10 m³), DIB (30 m³) ou végétaux (30 m³).",
     intro:
@@ -154,8 +154,8 @@ const services = [
   },
   {
     slug: "location-pelle-chauffeur",
-    img: "./../images/ds (2).png",
-    heroImg: "./../images/ds (2).png",
+    img: "/images/ds (2).png",
+    heroImg: "/images/ds (2).png",
     title: "Location de pelle avec chauffeur",
     desc: "Mise à disposition de pelle avec conducteur pour les professionnels.",
     intro:
