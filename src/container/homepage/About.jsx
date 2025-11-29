@@ -16,7 +16,7 @@ const About = () => {
                     <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
                     <div className="wrapper__bg-head"></div>
                     <Navbar />
-                    <Head default="home" current="About" title={"about us"} />
+                    <Head default="home" current="A propos" title={"A propos"} />
                 </div>
 
                 <AboutSec />

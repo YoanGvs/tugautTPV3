@@ -13,7 +13,7 @@ const DetailService = () => {
   return (
     <Fragment>
       <div className="overflow-hidden">
-        <div className="position-relative">
+        <div className="position-relative" id="service-hero">
           <img src="/images/Bg.png" className="images__wrap-head" alt="" />
           <div className="wrapper__bg-head"></div>
           <Navbar />

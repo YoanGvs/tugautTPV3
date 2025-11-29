@@ -5,7 +5,7 @@ const CardSevice = (props) => {
     const { data } = props;
     return (
         <NavLink
-            to={`/service/detail/${data.slug}`} className="wrapper__card-service color__black d-inline-block w-100">
+            to={`/service/detail/${data.slug}#service-hero`} className="wrapper__card-service color__black d-inline-block w-100">
             <img src={data.img} className='img' alt={data.title} />
             <div className="desc">
                 <div className="h5 medium font__size--20 text__20-1024 text-uppercase">{data.title}</div>
@@ -13,7 +13,7 @@ const CardSevice = (props) => {
                     {data.desc}
                 </p>
                 <div className="d-inline-block">
-                    <a href="#!" className='color__orange text-uppercase'>en savoir plus</a>
+                    <span className='color__orange text-uppercase'>en savoir plus</span>
                 </div>
             </div>
         </NavLink>

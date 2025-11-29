@@ -50,6 +50,20 @@ const ScrollReveal = ({ children }) => {
     return () => observer.disconnect();
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.replace("#", "");
+    const scrollTarget = document.getElementById(id);
+    if (!scrollTarget) return;
+
+    // delay to ensure page content is rendered
+    const timeout = setTimeout(() => {
+      scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, [location.hash, location.pathname]);
+
   return children;
 };
 
