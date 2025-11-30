@@ -7,7 +7,7 @@ const About = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-5 mb-4 my-md-auto animate-fade-up animate-delay-1">
-            <img src="./../images/Images.png" className="w-100" alt="" />
+            <img src="./../images/image.webp" className="w-100" alt="" />
           </div>
           <div className="col-md-7 col-lg-6 my-auto ps-lg-5">
             <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">

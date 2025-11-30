@@ -1,34 +1,33 @@
-import React, { Fragment } from 'react'
-import Footer from '../../component/Other/Footer'
-import Navbar from '../../component/Other/Navbar'
-import Contact from '../../component/Section/Contact'
-import AboutSec from '../../component/Section/About'
-import Head from '../../component/Section/Head'
-import Number from '../../component/Section/Number'
-import Step from '../../component/Section/Step'
-import Testimonial from '../../component/Section/Testimonial'
+import React, { Fragment } from "react";
+import Footer from "../../component/Other/Footer";
+import Navbar from "../../component/Other/Navbar";
+import Contact from "../../component/Section/Contact";
+import AboutSec from "../../component/Section/About";
+import Head from "../../component/Section/Head";
+import Number from "../../component/Section/Number";
+import Step from "../../component/Section/Step";
+import Testimonial from "../../component/Section/Testimonial";
 
 const About = () => {
-    return (
-        <Fragment>
-            <div className="overflow-hidden">
-                <div className="position-relative">
-                    <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
-                    <div className="wrapper__bg-head"></div>
-                    <Navbar />
-                    <Head default="home" current="A propos" title={"A propos"} />
-                </div>
+  return (
+    <Fragment>
+      <div className="overflow-hidden">
+        <div className="position-relative">
+          <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
+          <div className="wrapper__bg-head"></div>
+          <Navbar />
+          <Head default="home" current="A propos" title={"A propos"} />
+        </div>
 
-                <AboutSec />
+        <AboutSec />
 
-                <Number />
+        <Number />
 
-                <Step />
+        <Step />
 
-                <Testimonial />
+        <Testimonial />
 
-
-                <section>
+        {/* <section>
                     <div className="container">
                         <div className="text-center mb-5">
                             <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase">OUR TEAM</p>
@@ -107,14 +106,14 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
-                <Contact />
+        <Contact />
 
-                <Footer />
-            </div >
-        </Fragment>
-    )
-}
+        <Footer />
+      </div>
+    </Fragment>
+  );
+};
 
-export default About
+export default About;

@@ -64,20 +64,20 @@ const Footer = (props) => {
               </li>
             </ul>
           </div> */}
-          <div className="col-12 col-md-6 col-lg-5 mb-4 mb-md-0 footer__contact text-center text-md-start">
+          <div className="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 footer__contact text-center text-md-start">
             <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               nos reseau sociaux
             </h5>
 
             <div className="d-flex align-items-center">
-              <a href="#!">
-                <img src="/images/FB.png" alt="" />
+              <a href="https://www.facebook.com/TUGAUT.TP">
+                <img src="/images/facebookIcon.webp" alt="lien facebook" />
               </a>
-              <a href="#!" className="mx-3">
-                <img src="/images/IG.png" alt="" />
+              <a href="https://www.instagram.com/tugaut.tp/" className="mx-3">
+                <img src="/images/instagramIcon.webp" alt="lien instagram" />
               </a>
-              <a href="#!">
-                <img src="/images/WA.png" alt="" />
+              <a href="https://www.instagram.com/tugaut.tp/" className="mx-3">
+                <img src="/images/tiktokIcon24Px.webp" alt="lien tiktok" />
               </a>
             </div>
 
@@ -86,7 +86,7 @@ const Footer = (props) => {
                 nous contacter
               </h5>
               <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start footer__contact-item mb-3">
-                <img src="/images/Message.png" alt="" />
+                <img src="/images/emailIcon.webp" alt="icon email" />
                 <span className="semi-bold font__size--14 text__14-1024 text-uppercase ms-sm-2 mt-2 mt-sm-0">
                   contact@tugaut-tp.com
                 </span>
@@ -99,7 +99,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-12 col-lg-4">
             <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               subscribe
             </h5>
