@@ -58,42 +58,77 @@ const SliderConstruction = () => {
       >
         <div className="items">
           <img
-            src="./../images/rn (1).png"
+            src="./../images/TTP1.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/rn (3).png"
+            src="./../images/TTP2.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/rn (2).png"
+            src="./../images/TTP3.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/rn (1).png"
+            src="./../images/TTP4.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/rn (3).png"
+            src="./../images/TTP5.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/rn (2).png"
+            src="./../images/TTP6.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/TTP7.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/TTP8.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/TTP9.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/TTP10.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/TTP11.webp"
             className="images__construction"
             alt=""
           />
