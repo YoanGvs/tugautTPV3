@@ -66,7 +66,7 @@ const Step = () => {
             </div>
           </div>
           <div className="order-md-12 order-1 mb-4 col-md-6 col-lg-5 my-md-auto text-right animate-fade-up animate-delay-2">
-            <img src="./../images/sdsadas.png" className="w-100" alt="" />
+            <img src="./../images/imageStep.webp" className="w-100" alt="" />
           </div>
         </div>
       </div>

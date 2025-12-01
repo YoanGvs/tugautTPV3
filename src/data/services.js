@@ -1,7 +1,7 @@
 const services = [
   {
     slug: "assainissement",
-    img: "/images/Image (4).png",
+    img: "/images/1.webp",
     heroImg: "/images/Image (4).png",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
@@ -35,7 +35,7 @@ const services = [
   },
   {
     slug: "nivellement-terrassement",
-    img: "/images/Image (5).png",
+    img: "/images/2.webp",
     heroImg: "/images/Image (5).png",
     title: "Nivellement & Terrassement",
     desc: "Préparation de terrain en vue d’une construction (maison, terrasse, etc.).",
@@ -69,7 +69,7 @@ const services = [
   },
   {
     slug: "amenagement-exterieur",
-    img: "/images/Image (6).png",
+    img: "/images/3.webp",
     heroImg: "/images/Image (6).png",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
@@ -99,7 +99,7 @@ const services = [
   },
   {
     slug: "demolition",
-    img: "/images/ds (1).png",
+    img: "/images/4.webp",
     heroImg: "/images/ds (1).png",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
@@ -125,7 +125,7 @@ const services = [
   },
   {
     slug: "location-de-benne",
-    img: "/images/ds (3).png",
+    img: "/images/5.webp",
     heroImg: "/images/ds (3).png",
     title: "Location de benne",
     desc: "Bennes à gravats (10 m³), DIB (30 m³) ou végétaux (30 m³).",
@@ -154,7 +154,7 @@ const services = [
   },
   {
     slug: "location-pelle-chauffeur",
-    img: "/images/ds (2).png",
+    img: "/images/6.webp",
     heroImg: "/images/ds (2).png",
     title: "Location de pelle avec chauffeur",
     desc: "Mise à disposition de pelle avec conducteur pour les professionnels.",
