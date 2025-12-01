@@ -13,7 +13,11 @@ const About = () => {
     <Fragment>
       <div className="overflow-hidden">
         <div className="position-relative">
-          <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
+          <img
+            src="./../images/TTP7.webp"
+            className="images__wrap-head"
+            alt=""
+          />
           <div className="wrapper__bg-head"></div>
           <Navbar />
           <Head default="home" current="A propos" title={"A propos"} />
@@ -21,11 +25,11 @@ const About = () => {
 
         <AboutSec />
 
-        <Number />
+        {/* <Number /> */}
 
-        <Step />
+        {/* <Step />
 
-        <Testimonial />
+        <Testimonial /> */}
 
         {/* <section>
                     <div className="container">

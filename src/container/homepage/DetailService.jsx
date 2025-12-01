@@ -14,7 +14,11 @@ const DetailService = () => {
     <Fragment>
       <div className="overflow-hidden">
         <div className="position-relative" id="service-hero">
-          <img src="/images/Bg.png" className="images__wrap-head" alt="" />
+          <img
+            src="./../images/TTP7.webp"
+            className="images__wrap-head"
+            alt=""
+          />
           <div className="wrapper__bg-head"></div>
           <Navbar />
           <Head

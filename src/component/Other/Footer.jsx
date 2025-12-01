@@ -80,7 +80,8 @@ const Footer = (props) => {
                 <img src="/images/tiktokIcon24Px.webp" alt="lien tiktok" />
               </a>
             </div>
-
+          </div>
+          <div className="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 footer__contact text-center text-md-start">
             <div className="mt-4 mt-md-5">
               <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3 text-center text-md-start">
                 nous contacter
@@ -99,7 +100,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-4">
+          {/* <div className="col-12 col-lg-4">
             <h5 className="semi-bold font__size--14 text__14-1024 text-uppercase mb-3">
               subscribe
             </h5>
@@ -114,7 +115,7 @@ const Footer = (props) => {
             <button className="semi-bold font__size--14 text__14-1024 color__white text-uppercase btn btn__orange shadow rounded-0">
               send
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-4 mt-md-5">
           Copyright Tugaut TP. 2025 All Right Reserved
