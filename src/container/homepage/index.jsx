@@ -41,7 +41,7 @@ const Index = (props) => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/TTP7.webp"
+            src="./../images/project/tugauttp_entrepot.JPG"
             className="images__wrap-head"
             alt=""
           />
@@ -57,9 +57,9 @@ const Index = (props) => {
                 <p className="medium roboto font__size--16 text__16-1024 color__white my-4 hero__subtitle-animate">
                   Entreprise familiale experte depuis plus de 12 ans,{" "}
                   <br className="d-none d-sm-block" /> nous accompagnons
-                  collectivités, entreprises et particuliers du BTP dans la
-                  réalisation de chantiers durables, maîtrisés et conformes aux
-                  normes environnementales.
+                  collectivités, entreprises et particuliers dans la réalisation
+                  de chantiers durables, maîtrisés et conformes aux normes
+                  environnementales.
                 </p>
 
                 <div className="d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-center">

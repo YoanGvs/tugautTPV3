@@ -6,18 +6,13 @@ const services = [
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:
-      "Nous dimensionnons et posons vos réseaux d’assainissement conformément aux DTU et aux exigences du SPANC afin de sécuriser votre chantier et l’environnement local.",
+      "Nous posons vos réseaux d’assainissement conformément aux prérequis de l'étude de sol du SPANC afin de sécuriser votre chantier et l’environnement local.",
     content: [
-      "TUGAUT TP prend en charge l’ensemble du cycle : étude de sol, choix des filières (micro-station, fosse toutes eaux, raccordement au tout-à-l’égout), terrassement et pose des canalisations. Nous veillons à la bonne ventilation, à l’accessibilité des regards et à l’étanchéité de chaque tronçon pour garantir un fonctionnement durable.",
-      "Nos équipes coordonnent les contrôles réglementaires, la remise en état des abords et la mise en service. Vous disposez ainsi d’un interlocuteur unique pour livrer un réseau prêt à l’emploi et conforme aux attentes des collectivités.",
+      "Notres savoir-faire va de la creation complète d'un assainissement individuel, collectif et public (tout à l'égout) et également la remise en conformité d'un réseau déja existant. Nous intervenons aussi sur de la réfection et du dépannage.",
     ],
     quote:
       "Chaque réseau est dimensionné sur mesure pour protéger la nappe phréatique, vos ouvrages et la qualité de vie des riverains.",
     highlights: [
-      {
-        title: "Diagnostic et étude de sol",
-        text: "Analyse de perméabilité, relevés topographiques et constitution du dossier SPANC.",
-      },
       {
         title: "Pose des ouvrages",
         text: "Implantation des fosses, tranchées drainantes, pompes de relevage et raccordement aux réseaux existants.",
@@ -29,7 +24,6 @@ const services = [
     ],
     deliverables: [
       "Plans d’exécution et schémas des réseaux enterrés",
-      "Rapport de conformité transmis au SPANC",
       "Conseils d’entretien pour garantir la pérennité des installations",
     ],
   },
