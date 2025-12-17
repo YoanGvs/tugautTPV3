@@ -9,11 +9,14 @@ const Navbar = (props) => {
     () => [
       { path: "/", label: "Accueil", end: true },
       { path: "/about", label: "À propos" },
-      { path: "/service", label: "Service" },
+      { path: "/service", label: "Service", hash: "#service-hero" },
       { path: "/contact", label: "Nous contacter" },
     ],
     []
   );
+
+  const toWithHash = (item) =>
+    item.hash ? { pathname: item.path, hash: item.hash } : item.path;
 
   const isActivePath = (path, end = false) => {
     if (end) {
@@ -63,7 +66,7 @@ const Navbar = (props) => {
               {navItems.map((item, index) => (
                 <Fragment key={item.path}>
                   <NavLink
-                    to={item.path}
+                    to={toWithHash(item)}
                     end={item.end}
                     className={mobileLinkClass(item)}
                   >
@@ -103,7 +106,7 @@ const Navbar = (props) => {
               {navItems.map((item) => (
                 <li className="nav-item" key={item.path}>
                   <NavLink
-                    to={item.path}
+                    to={toWithHash(item)}
                     end={item.end}
                     className={desktopLinkClass(item)}
                   >

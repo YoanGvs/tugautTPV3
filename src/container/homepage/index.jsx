@@ -70,7 +70,7 @@ const Index = (props) => {
                     En savoir plus
                   </a>
                   <NavLink
-                    to="/service"
+                    to="/service#service-hero"
                     className="btn__mm-w-60  semi-bold font__size--14 text__14-1024 btn btn__outlined--white color__white no__opacity h__black rounded-0 shadow text-uppercase mt-3 mt-sm-0 ms-sm-4"
                   >
                     Nos services

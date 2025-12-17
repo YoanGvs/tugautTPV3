@@ -12,7 +12,7 @@ const Service = () => {
   return (
     <Fragment>
       <div className="overflow-hidden">
-        <div className="position-relative">
+        <div className="position-relative" id="service-hero">
           <img
             src="./../images/TTP7.webp"
             className="images__wrap-head"

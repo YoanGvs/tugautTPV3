@@ -53,7 +53,7 @@ const Service = ({
           <div className="text-center animate-fade-up animate-delay-3">
             <div className="d-inline-block">
               <NavLink
-                to="/service"
+                to="/service#service-hero"
                 className={`semi-bold font__size--14 text__14-1024 btn ${ctaClass} no__opacity rounded-0 shadow text-uppercase`}
               >
                 Nos Service

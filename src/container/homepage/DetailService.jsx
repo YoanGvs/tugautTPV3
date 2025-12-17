@@ -15,7 +15,7 @@ const DetailService = () => {
       <div className="overflow-hidden">
         <div className="position-relative" id="service-hero">
           <img
-            src="./../images/Tproject"
+            src="./../images/project/tugauttp_entrepot.JPG"
             className="images__wrap-head"
             alt=""
           />
@@ -40,7 +40,7 @@ const DetailService = () => {
                   {services.map((item) => (
                     <li key={item.slug}>
                       <NavLink
-                        to={`/service/detail/${item.slug}`}
+                        to={`/service/detail/${item.slug}#service-hero`}
                         className={`normal font__size--16 text__20-1024 roboto ${
                           item.slug === service.slug ? "active" : ""
                         }`}
