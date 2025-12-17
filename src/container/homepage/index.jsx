@@ -87,6 +87,7 @@ const Index = (props) => {
           service={featuredServices}
           sectionClassName="section--orange"
           titleClassName="section__title--white"
+          textLight
         />
 
         <Step />

@@ -4568,7 +4568,14 @@ h5 {
 .wrapper__navbar {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  z-index: 997 !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #000000;
+  backdrop-filter: blur(6px);
+  z-index: 1100 !important;
 }
 .wrapper__navbar-menu .menu__center {
   position: absolute;
@@ -4839,6 +4846,39 @@ h5 {
 }
 .scroll-top-btn:focus {
   outline: none;
+}
+
+.footer__legal-wrapper {
+  margin-top: 32px;
+  text-align: center;
+}
+.footer__legal-bar {
+  height: 40px;
+  background: #ff9900;
+}
+.footer__legal-text {
+  padding: 18px 12px 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff9900;
+}
+.footer__legal-link {
+  color: #ff9900;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer__legal-link:hover {
+  text-decoration: underline;
+}
+.footer__legal-separator {
+  color: #666666;
+}
+.footer__legal-label {
+  color: #222222;
+}
+.footer__legal-brand {
+  color: #ff9900;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */

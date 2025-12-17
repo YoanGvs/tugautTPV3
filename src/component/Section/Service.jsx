@@ -2,7 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import CardSevice from "../Card/CardSevice";
 
-const Service = ({ service, type, sectionClassName, titleClassName }) => {
+const Service = ({
+  service,
+  type,
+  sectionClassName,
+  titleClassName,
+  textLight = false,
+}) => {
+  const subtitleClass = textLight ? "color__white" : "color__orange";
+  const ctaClass = textLight
+    ? "btn__outlined--white color__white"
+    : "btn__outlined--orange color__orange";
+
   return (
     <section
       className={["wrapper__section-service", sectionClassName]
@@ -11,7 +22,9 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
     >
       <div className="container">
         <div className="text-center mb-5">
-          <p className="semi-bold font__size--14 text__14-1024 color__orange text-uppercase animate-fade-up">
+          <p
+            className={`semi-bold font__size--14 text__14-1024 ${subtitleClass} text-uppercase animate-fade-up`}
+          >
             service
           </p>
           <h3
@@ -41,7 +54,7 @@ const Service = ({ service, type, sectionClassName, titleClassName }) => {
             <div className="d-inline-block">
               <NavLink
                 to="/service"
-                className="semi-bold font__size--14 text__14-1024 btn btn__outlined--orange color__orange no__opacity rounded-0 shadow text-uppercase"
+                className={`semi-bold font__size--14 text__14-1024 btn ${ctaClass} no__opacity rounded-0 shadow text-uppercase`}
               >
                 Nos Service
               </NavLink>

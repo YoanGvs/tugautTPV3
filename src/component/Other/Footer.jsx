@@ -7,9 +7,7 @@ const Footer = (props) => {
       <div className="container">
         <div className="row align-items-start">
           <div className="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 footer__brand text-center text-md-start">
-            <h3 className="semi-bold font__size--24 text__24-1024 color__black mb-3 mb-md-4">
-              TUGAUT<span className="color__orange">TP</span>
-            </h3>
+            <img id="logo" src="./../images/logo_tugauttp.png" alt="logo" />
             <p className="normal font__size--16 text__16-1024 roboto color__gray-1">
               Nous accompagnons collectivités, entreprises et particuliers dans
               la réalisation de chantiers durables, maîtrisés et conformes aux
@@ -117,8 +115,15 @@ const Footer = (props) => {
             </button>
           </div> */}
         </div>
-        <div className="text-center normal roboto font__size--16 text__16-1024 color__gray-1 mt-4 mt-md-5">
-          Copyright Tugaut TP. 2025 All Right Reserved
+      </div>
+      <div className="footer__legal-wrapper">
+        <div className="footer__legal-text">
+          <NavLink to="/terms#mentions-legales" className="footer__legal-link">
+            Mentions légales
+          </NavLink>
+          <span className="footer__legal-separator"> - </span>
+          <span className="footer__legal-label">Une création </span>
+          <span className="footer__legal-brand">Webessor</span>
         </div>
       </div>
     </section>
