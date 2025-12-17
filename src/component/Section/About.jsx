@@ -23,8 +23,8 @@ const About = () => {
               Basée à Pontpoint (60), TUGAUT TP intervient sur tout le
               département de l’Oise et les zones voisines (Aisne, Val-d’Oise,
               Seine-et-Marne). Nous mettons notre expertise technique et nos
-              équipements récents au service de vos
-              projets(assainissement,aménagements...)
+              équipements récents au service de vos projets (assainissement,
+              aménagements...)
             </p>
             {/* <p className="roboto normal font__size--16 text__16-1024 color__gray-1">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do

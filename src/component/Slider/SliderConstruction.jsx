@@ -65,13 +65,6 @@ const SliderConstruction = () => {
         </div>
         <div className="items">
           <img
-            src="./../images/TTP2.webp"
-            className="images__construction"
-            alt=""
-          />
-        </div>
-        <div className="items">
-          <img
             src="./../images/TTP3.webp"
             className="images__construction"
             alt=""
@@ -84,20 +77,7 @@ const SliderConstruction = () => {
             alt=""
           />
         </div>
-        <div className="items">
-          <img
-            src="./../images/TTP5.webp"
-            className="images__construction"
-            alt=""
-          />
-        </div>
-        <div className="items">
-          <img
-            src="./../images/TTP6.webp"
-            className="images__construction"
-            alt=""
-          />
-        </div>
+
         <div className="items">
           <img
             src="./../images/TTP7.webp"
@@ -129,6 +109,62 @@ const SliderConstruction = () => {
         <div className="items">
           <img
             src="./../images/TTP11.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/IMG_0043.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/68019100409__350DA3E6-7B17-44A3-A14F-5C9A82D404B5.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/68019085903__F568331A-4332-404C-98CE-26D036CFE713.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/tugauttp_entrepot.JPG"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/mini_pelle.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/IMG_2621.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/IMG_2870.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/IMG_2892.webp"
             className="images__construction"
             alt=""
           />

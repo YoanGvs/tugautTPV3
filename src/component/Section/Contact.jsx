@@ -439,7 +439,7 @@ const Contact = () => {
                 >
                   J'ai lu et j'accepte les{" "}
                   <a
-                    href="/terms#mentions-legales"
+                    href="/privacy"
                     className="color__orange text-decoration-underline"
                   >
                     conditions générales d'utilisation

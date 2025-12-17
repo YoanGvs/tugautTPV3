@@ -87,7 +87,7 @@ const Terms = () => {
                 propositions commerciales (avec votre accord). Elles sont
                 confidentielles. Conformément à la loi « Informatique et
                 Libertés » du 06/01/78, vous disposez de droits d’accès,
-                rectification, suppression et opposition en écrivant à ZI 80
+                rectification, suppression et opposition en écrivant à 162
                 chemin Cerisiers Roussel - 60700 Pontpoint ou à
                 contact@oiseterrassement.com, avec justificatif d’identité. Vous
                 pouvez vous désabonner des e-mails à tout moment.
