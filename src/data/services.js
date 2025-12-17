@@ -40,7 +40,7 @@ const services = [
       "Nous pouvons intégrer les réseaux secs et humides, stabiliser les sols avec des matériaux adaptés et compacter chaque couche selon les normes en vigueur. Votre projet démarre ainsi sur une base saine, plane et prête à bâtir.",
     ],
     quote:
-      "Un terrassement précis réduit les coûts structurels, sécurise vos délais et protège le bâti sur le long terme.",
+      "Un terrassement précis réduit les coûts structurels et protège le bâti sur le long terme.",
     highlights: [
       {
         title: "Études de plateforme",
@@ -56,7 +56,6 @@ const services = [
       },
     ],
     deliverables: [
-      "Journal de terrassement et rapports de compactage",
       "Plateforme nivelée prête à recevoir les fondations",
       "Conseils sur le phasage des travaux et les accès chantier",
     ],

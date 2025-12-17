@@ -18,6 +18,7 @@ import Contact from "./homepage/Contact";
 import Terms from "./homepage/Terms";
 import Privacy from "./homepage/Privacy";
 import Merci from "./homepage/Merci";
+import SocialSidebar from "../component/Other/SocialSidebar";
 
 const ScrollReveal = ({ children }) => {
   const location = useLocation();
@@ -71,6 +72,7 @@ const Index = (props) => {
   return (
     <Fragment>
       <Router>
+        <SocialSidebar />
         <ScrollReveal>
           <Routes>
             <Route path="/" element={<Homepage />} />
