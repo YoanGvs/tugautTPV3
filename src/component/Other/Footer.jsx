@@ -67,7 +67,7 @@ const Footer = (props) => {
               nos reseau sociaux
             </h5>
 
-            <div className="d-flex align-items-center">
+            <div className="align-items-center">
               <a href="https://www.facebook.com/TUGAUT.TP">
                 <img src="/images/facebookIcon.webp" alt="lien facebook" />
               </a>

@@ -437,7 +437,14 @@ const Contact = () => {
                   className="form-check-label semi-bold font__size--14 text__14-1024"
                   htmlFor="contact-consent"
                 >
-                  J’accepte que TUGAUT TP me contacte au sujet de ma demande.*
+                  J'ai lu et j'accepte les{" "}
+                  <a
+                    href="/terms#mentions-legales"
+                    className="color__orange text-decoration-underline"
+                  >
+                    conditions générales d'utilisation
+                  </a>
+                  .
                 </label>
                 {errors.consent && (
                   <p className="text-danger small mb-0">{errors.consent}</p>

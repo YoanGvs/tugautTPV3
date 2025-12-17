@@ -65,7 +65,7 @@ const Project = () => {
         <Fragment>
             <div className="overflow-hidden">
                 <div className="position-relative">
-                    <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
+                    <img src="./../images/project/tugauttp_entrepot.JPG" className="images__wrap-head" alt="" />
                     <div className="wrapper__bg-head"></div>
                     <Navbar />
                     <Head default="home" current="Our Project" title={"our project"} />

@@ -9,7 +9,7 @@ const Merci = () => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/TTP7.webp"
+            src="./../images/project/tugauttp_entrepot.JPG"
             className="images__wrap-head"
             alt=""
           />
