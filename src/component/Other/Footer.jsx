@@ -11,9 +11,9 @@ const Footer = (props) => {
               TUGAUT<span className="color__orange">TP</span>
             </h3>
             <p className="normal font__size--16 text__16-1024 roboto color__gray-1">
-              nous accompagnons collectivités, entreprises et professionnels du
-              BTP dans la réalisation de chantiers durables, maîtrisés et
-              conformes aux normes environnementales.{" "}
+              Nous accompagnons collectivités, entreprises et particuliers dans
+              la réalisation de chantiers durables, maîtrisés et conformes aux
+              normes environnementales.{" "}
             </p>
           </div>
           {/*           <div className="col-6 col-md-3 col-lg-3 mb-4 mb-md-0 footer__links">
