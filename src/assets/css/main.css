@@ -4914,5 +4914,10 @@ h5 {
   color: #ea6b00;
   font-weight: 700;
 }
+.navbar-brand__logo {
+  max-height: 36px;
+  width: auto;
+  display: block;
+}
 
 /*# sourceMappingURL=main.css.map */

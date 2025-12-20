@@ -48,12 +48,12 @@ const Navbar = (props) => {
         <div className="d-flex flex-wrap w-100">
           <div className="w-100">
             <div className="d-flex align-items-center justify-content-between mb-4">
-              <NavLink
-                to="/"
-                exact
-                className="navbar-brand font__size--24 text__24-1024 semi-bold color__white"
-              >
-                TUGAUT<span className="color__orange">TP</span>
+              <NavLink to="/" exact className="navbar-brand">
+                <img
+                  src="/images/logo_tugauttp.png"
+                  alt="TUGAUT TP"
+                  className="navbar-brand__logo"
+                />
               </NavLink>
               <img
                 src="/images/Close.png"
@@ -90,12 +90,12 @@ const Navbar = (props) => {
         data-aos-delay="300"
       >
         <div className="container position-relative">
-          <NavLink
-            to="/"
-            exact
-            className="navbar-brand font__size--24 text__24-1024 semi-bold color__white"
-          >
-            TUGAUT<span className="color__orange">TP</span>
+          <NavLink to="/" exact className="navbar-brand">
+            <img
+              src="/images/logo_tugauttp.png"
+              alt="TUGAUT TP"
+              className="navbar-brand__logo"
+            />
           </NavLink>
 
           <div
