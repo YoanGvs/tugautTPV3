@@ -15,9 +15,9 @@ const DetailService = () => {
       <div className="overflow-hidden">
         <div className="position-relative" id="service-hero">
           <img
-            src="./../images/project/tugauttp_entrepot.JPG"
+            src={service.heroImg || service.img || "./../images/project/tugauttp_entrepot.JPG"}
             className="images__wrap-head"
-            alt=""
+            alt={service.title}
           />
           <div className="wrapper__bg-head"></div>
           <Navbar />

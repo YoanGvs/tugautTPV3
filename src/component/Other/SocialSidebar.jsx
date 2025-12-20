@@ -83,7 +83,7 @@ const SocialSidebar = () => {
           onClick={handleShow}
           aria-label="Afficher les liens sociaux"
         >
-          Réseaux
+          ☰
         </button>
       )}
     </>

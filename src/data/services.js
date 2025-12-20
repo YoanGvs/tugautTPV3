@@ -2,7 +2,7 @@ const services = [
   {
     slug: "assainissement",
     img: "/images/1.webp",
-    heroImg: "/images/Image (4).png",
+    heroImg: "/images/project/assainissement.webp",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:
@@ -30,14 +30,14 @@ const services = [
   {
     slug: "nivellement-terrassement",
     img: "/images/2.webp",
-    heroImg: "/images/Image (5).png",
+    heroImg: "/images/TTP10.webp",
     title: "Nivellement & Terrassement",
     desc: "Préparation de terrain en vue d’une construction (maison, terrasse, etc.).",
     intro:
       "Nous préparons vos plateformes avec précision pour accueillir maisons individuelles, bâtiments industriels ou zones de voirie.",
     content: [
       "Après décaissement, nous assurons la gestion des déblais/remblais et la création des accès chantier. Nos équipes utilisent un guidage laser pour livrer une préparation millimétrée.",
-      "Nous pouvons intégrer les réseaux d'eau potable, électrique et télécom,  stabiliser les sols avec des matériaux adaptés et compacter chaque couche selon les normes en vigueur. Votre projet démarre ainsi sur une base saine, plane et prête à bâtir.",
+      "Nous pouvons intégrer les réseaux d'eau potable, électrique et télécom, stabiliser les sols avec des matériaux adaptés et compacter chaque couche selon les normes en vigueur. Votre projet démarre ainsi sur une base saine, plane et prête à bâtir.",
     ],
     quote:
       "Un terrassement précis réduit les coûts structurels et protège le bâti sur le long terme.",
@@ -63,7 +63,7 @@ const services = [
   {
     slug: "amenagement-exterieur",
     img: "/images/3.webp",
-    heroImg: "/images/Image (6).png",
+    heroImg: "/images/project/terrassement.JPG",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
     intro:
@@ -93,7 +93,7 @@ const services = [
   {
     slug: "demolition",
     img: "/images/4.webp",
-    heroImg: "/images/ds (1).png",
+    heroImg: "/images/project/tugauttp_entrepot.jpg",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
     intro:
@@ -119,7 +119,7 @@ const services = [
   {
     slug: "location-de-benne",
     img: "/images/5.webp",
-    heroImg: "/images/ds (3).png",
+    heroImg: "/images/project/tugauttp_entrepot.jpg",
     title: "Location de benne",
     desc: "Bennes à gravats (10 m³), DIB (30 m³) ou végétaux (30 m³).",
     intro:
@@ -148,7 +148,7 @@ const services = [
   {
     slug: "location-pelle-chauffeur",
     img: "/images/6.webp",
-    heroImg: "/images/ds (2).png",
+    heroImg: "/images/project/tugauttp_entrepot.jpg",
     title: "Location de pelle avec chauffeur",
     desc: "Mise à disposition de pelle avec conducteur pour les professionnels.",
     intro:
