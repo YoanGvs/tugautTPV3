@@ -167,7 +167,11 @@ const Contact = () => {
 
   return (
     <section className="position-relative" id="contact-form">
-      <img src="/images/sdad.png" className="images__wrap-contact" alt="" />
+      <img
+        src="./../images/project/mini_pelle.webp"
+        className="images__wrap-contact"
+        alt=""
+      />
       <div className="wrapper__bg-orange-wrap"></div>
       <div className="container position-relative z-2">
         <div className="row">

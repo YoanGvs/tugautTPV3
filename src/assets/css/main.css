@@ -3236,7 +3236,7 @@ h5 {
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(234, 107, 0, 0.67) 0%,
-    #ff5e14 100%
+    #ea6b00 100%
   );
 }
 .wrapper__card-blog {
@@ -3291,7 +3291,7 @@ h5 {
   display: none;
 }
 .section--orange {
-  background-color: #ff5e14;
+  background-color: #ea6b00;
 }
 .section__title--white {
   color: #fff;
@@ -4897,7 +4897,7 @@ h5 {
   color: #ff9900;
 }
 .footer__legal-link {
-  color: #ff9900;
+  color: #ea6b00;
   text-decoration: none;
   font-weight: 700;
 }
@@ -4911,7 +4911,7 @@ h5 {
   color: #222222;
 }
 .footer__legal-brand {
-  color: #ff9900;
+  color: #ea6b00;
   font-weight: 700;
 }
 
