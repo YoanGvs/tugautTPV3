@@ -115,21 +115,21 @@ const SliderConstruction = () => {
         </div>
         <div className="items">
           <img
-            src="./../images/project/IMG_0043.webp"
+            src="./../images/project/maison.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/68019100409__350DA3E6-7B17-44A3-A14F-5C9A82D404B5.webp"
+            src="./../images/project/cloture.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/68019085903__F568331A-4332-404C-98CE-26D036CFE713.webp"
+            src="./../images/project/terrassement4.JPG"
             className="images__construction"
             alt=""
           />
@@ -150,21 +150,35 @@ const SliderConstruction = () => {
         </div>
         <div className="items">
           <img
-            src="./../images/project/IMG_2621.webp"
+            src="./../images/project/assainissement.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/IMG_2870.webp"
+            src="./../images/project/assainissement2.JPG"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/IMG_2892.webp"
+            src="./../images/project/assainissement3.JPEG"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/chemin.webp"
+            className="images__construction"
+            alt=""
+          />
+        </div>
+        <div className="items">
+          <img
+            src="./../images/project/cloture.webp"
             className="images__construction"
             alt=""
           />
