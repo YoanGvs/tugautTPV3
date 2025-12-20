@@ -1,5 +1,5 @@
 import React, { useState, Fragment, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "../../component/Other/Footer";
 import Navbar from "../../component/Other/Navbar";
 import About from "../../component/Section/About";
@@ -12,6 +12,7 @@ import Testimonial from "../../component/Section/Testimonial";
 import services from "../../data/services";
 
 const Index = (props) => {
+  const navigate = useNavigate();
   const featuredServices = services.slice(0, 3);
   const blog = [
     {
@@ -106,7 +107,10 @@ const Index = (props) => {
               Chantiers réalisés
             </h3>
           </div>
-          <div className="animate-fade-up animate-delay-2">
+          <div
+            className="animate-fade-up animate-delay-2 cursor-pointer"
+            onClick={() => navigate("/project")}
+          >
             <SliderConstruction />
           </div>
         </section>

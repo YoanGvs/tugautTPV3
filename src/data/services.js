@@ -2,7 +2,7 @@ const services = [
   {
     slug: "assainissement",
     img: "/images/1.webp",
-    heroImg: "/images/project/assainissement.webp",
+    heroImg: "/images/project/assainissement3.jpeg",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:

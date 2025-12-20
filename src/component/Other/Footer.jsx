@@ -12,7 +12,7 @@ const Footer = (props) => {
             <div className="footer__brand">
               <img
                 id="logo"
-                src="./../images/project/logo_tugauttp.png"
+                src="/images/project/logo_tugauttp.png"
                 alt="logo TUGAUT TP"
                 className="mb-3"
               />
@@ -77,19 +77,19 @@ const Footer = (props) => {
               <li className="d-flex align-items-start mb-3">
                 <img src="/images/emailIcon.webp" alt="email" />
                 <span className="ms-2 roboto normal font__size--16 text__16-1024 ">
-                  contact@tugaut-tp.com
+                  tugauttp@gmail.com
                 </span>
               </li>
               <li className="d-flex align-items-start mb-3">
                 <img src="/images/Call.png" alt="téléphone" />
                 <span className="ms-2 roboto normal font__size--16 text__16-1024 ">
-                  +33 6 12 34 56 78
+                  +33 6 70 01 24 95
                 </span>
               </li>
               <li className="d-flex align-items-start">
                 <img src="/images/Frame.png" alt="adresse" />
                 <span className="ms-2 roboto normal font__size--16 text__16-1024 ">
-                  ZI 80 chemin Cerisiers Roussel <br /> 60700 Pontpoint
+                  162 rue Cerisiers Roussel <br /> 60700 Pontpoint
                 </span>
               </li>
             </ul>

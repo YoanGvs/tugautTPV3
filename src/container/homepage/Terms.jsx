@@ -29,42 +29,51 @@ const Terms = () => {
               <h2 className="semi-bold font__size--48 text__48-1024 text__48-md text__48-sm text-uppercase">
                 Mentions légales et conditions d’utilisation
               </h2>
-              <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-0">
-                Les informations ci-dessous présentent l’éditeur du site, les
-                modalités de contact et les conditions générales d’utilisation
-                du site oiseterrassement.com.
-              </p>
             </div>
-
             <div className="mb-5">
               <h3 className="semi-bold font__size--32 text__32-1024 text__32-xs">
-                Contacts utiles
+                Éditeur du site : Tugaut TP
               </h3>
-              <ul className="roboto normal font__size--18 text__18-1024 color__gray-1 ps-4">
-                <li>Nous suivre sur Facebook et Instagram</li>
-                <li>Nous appeler au </li>
-                <li>Nous envoyer un message</li>
-                <li>Voir nos avis sur Google</li>
-                <li>Recrutement</li>
-                <li>Adresse : </li>
-              </ul>
+              <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-2">
+                tugaut TP dont le siège social est 162 chemin Cerisiers Roussel
+                - 60700 Pontpoint
+              </p>
+              <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-2">
+                SIRET : 79467592600024
+                <br />
+                N° TVA : FR08794675926
+                <br />
+                Téléphone : 06.70.01.24.95
+                <br />
+                E-mail : tugautTP@gmail.com
+              </p>
             </div>
-
+            <div className="mb-5">
+              <h2 className="semi-bold font__size--48 text__48-1024 text__48-md text__48-sm text-uppercase">
+                Ce site est hébergé par :
+              </h2>
+            </div>
             <div className="mb-5">
               <h3 className="semi-bold font__size--32 text__32-1024 text__32-xs">
-                Éditeur du site
+                Webessor
               </h3>
               <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-2">
-                tugaut TP dont le siège social est .
+                Entrepreneur individuel
               </p>
               <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-2">
-                SIRET : <br />
-                N° TVA : <br />
-                Téléphone : <br />
-                E-mail :
-              </p>
-              <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-0">
-                Hébergement :
+                SIRET : 80236470300040
+                <br />
+                Téléphone : 07.67.49.48.38
+                <br />
+                Nom Prenom : Yoän Govaerts
+                <br />
+                Adresse : 164 rue Saint Paterne, 60700 Pontpoint
+                <br />
+                Téléphone : 07.67.49.48.38
+                <br />
+                E-mail : yoangovaerts.pro@gmail.com
+                <br />
+                Code APE : 6201Z
               </p>
             </div>
 
@@ -89,8 +98,8 @@ const Terms = () => {
                 Libertés » du 06/01/78, vous disposez de droits d’accès,
                 rectification, suppression et opposition en écrivant à 162
                 chemin Cerisiers Roussel - 60700 Pontpoint ou à
-                contact@oiseterrassement.com, avec justificatif d’identité. Vous
-                pouvez vous désabonner des e-mails à tout moment.
+                contact@tugaut-tp.fr, avec justificatif d’identité. Vous pouvez
+                vous désabonner des e-mails à tout moment.
               </p>
               <p className="roboto normal font__size--18 text__18-1024 color__gray-1 lh-2 mb-2">
                 <strong>Art. 3 Liens hypertextes :</strong> toute création de

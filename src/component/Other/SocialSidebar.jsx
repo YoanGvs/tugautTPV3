@@ -12,17 +12,17 @@ const socialLinks = [
     icon: "/images/instagramIcon.webp",
   },
   {
-    href: "https://www.instagram.com/tugaut.tp/",
+    href: "https://www.tiktok.com/@tugaut.tp",
     label: "TikTok",
     icon: "/images/tiktokIcon24Px.webp",
   },
   {
-    href: "tel:+33612345678",
+    href: "tel:+33670012495",
     label: "Téléphone",
     icon: "/images/Call.png",
   },
   {
-    href: "mailto:contact@tugaut-tp.com",
+    href: "mailto:tugauttp@gmail.com",
     label: "Email",
     icon: "/images/emailIcon.webp",
   },
