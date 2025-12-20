@@ -2,13 +2,13 @@ const services = [
   {
     slug: "assainissement",
     img: "/images/1.webp",
-    heroImg: "/images/project/assainissement3.jpeg",
+    heroImg: "./images/project/assainissement3.JPEG",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:
       "Nous posons vos réseaux d’assainissement conformément aux prérequis de l'étude de sol du SPANC afin de sécuriser votre chantier et l’environnement local.",
     content: [
-      "Notres savoir-faire va de la creation complète d'un assainissement individuel, collectif et public (tout à l'égout) et également la remise en conformité d'un réseau déja existant. Nous intervenons aussi sur de la réfection et du dépannage.",
+      "Notres savoir-faire va de la création complète d'un assainissement individuel, collectif et public (tout à l'égout) et également la remise en conformité d'un réseau déja existant. Nous intervenons aussi sur de la réfection et du dépannage.",
     ],
     quote:
       "Chaque réseau est dimensionné sur mesure pour protéger la nappe phréatique, vos ouvrages et la qualité de vie des riverains.",
@@ -30,7 +30,7 @@ const services = [
   {
     slug: "nivellement-terrassement",
     img: "/images/2.webp",
-    heroImg: "/images/TTP10.webp",
+    heroImg: "./../images/TTP10.webp",
     title: "Nivellement & Terrassement",
     desc: "Préparation de terrain en vue d’une construction (maison, terrasse, etc.).",
     intro:
@@ -62,7 +62,7 @@ const services = [
   },
   {
     slug: "amenagement-exterieur",
-    img: "/images/3.webp",
+    img: "./../images/3.webp",
     heroImg: "/images/project/terrassement.JPG",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
@@ -92,7 +92,7 @@ const services = [
   },
   {
     slug: "demolition",
-    img: "/images/4.webp",
+    img: "./../images/4.webp",
     heroImg: "/images/project/tugauttp_entrepot.jpg",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
