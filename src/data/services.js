@@ -36,8 +36,8 @@ const services = [
     intro:
       "Nous préparons vos plateformes avec précision pour accueillir maisons individuelles, bâtiments industriels ou zones de voirie.",
     content: [
-      "Après décapage de la terre végétale, nous assurons le terrassement en pleine masse, la gestion des déblais/remblais et la création des accès chantier. Nos équipes utilisent un guidage laser pour livrer des pentes exactes et éviter toute stagnation d’eau.",
-      "Nous pouvons intégrer les réseaux secs et humides, stabiliser les sols avec des matériaux adaptés et compacter chaque couche selon les normes en vigueur. Votre projet démarre ainsi sur une base saine, plane et prête à bâtir.",
+      "Après décaissement, nous assurons la gestion des déblais/remblais et la création des accès chantier. Nos équipes utilisent un guidage laser pour livrer une préparation millimétrée.",
+      "Nous pouvons intégrer les réseaux d'eau potable, électrique et télécom,  stabiliser les sols avec des matériaux adaptés et compacter chaque couche selon les normes en vigueur. Votre projet démarre ainsi sur une base saine, plane et prête à bâtir.",
     ],
     quote:
       "Un terrassement précis réduit les coûts structurels et protège le bâti sur le long terme.",
