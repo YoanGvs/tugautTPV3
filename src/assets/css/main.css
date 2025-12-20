@@ -4848,6 +4848,40 @@ h5 {
   outline: none;
 }
 
+.footer {
+  background: #0c0c0c;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+.footer__title {
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.footer__brand p,
+.footer__links,
+.footer__list {
+  color: #ffffff;
+}
+.footer .color__gray-1,
+.footer .color__gray-2,
+.footer .footer__legal-label,
+.footer .footer__legal-separator {
+  color: #ffffff;
+}
+.footer__link {
+  display: inline-block;
+  padding: 6px 0;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer__link:hover {
+  color: #ff8f28;
+}
+.footer__social img {
+  width: 32px;
+  height: 32px;
+}
 .footer__legal-wrapper {
   margin-top: 32px;
   text-align: center;
