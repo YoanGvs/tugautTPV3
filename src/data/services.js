@@ -2,7 +2,7 @@ const services = [
   {
     slug: "assainissement",
     img: "/images/1.webp",
-    heroImg: "./images/project/assainissement3.JPEG",
+    heroImg: "/images/project/assainissement3.JPEG",
     title: "Assainissement",
     desc: "Individuel, collectif ou tout à l’égout (réseau d’eau pluviale ou usée).",
     intro:
@@ -30,7 +30,7 @@ const services = [
   {
     slug: "nivellement-terrassement",
     img: "/images/2.webp",
-    heroImg: "./../images/TTP10.webp",
+    heroImg: "/images/project/terrassement3.JPEG",
     title: "Nivellement & Terrassement",
     desc: "Préparation de terrain en vue d’une construction (maison, terrasse, etc.).",
     intro:
@@ -63,7 +63,7 @@ const services = [
   {
     slug: "amenagement-exterieur",
     img: "./../images/3.webp",
-    heroImg: "/images/project/terrassement.JPG",
+    heroImg: "/images/project/terrassement6.jpg",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
     intro:
@@ -93,7 +93,7 @@ const services = [
   {
     slug: "demolition",
     img: "./../images/4.webp",
-    heroImg: "/images/project/tugauttp_entrepot.jpg",
+    heroImg: "/images/project/tugauttp_entrepot.JPG",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
     intro:
@@ -119,7 +119,7 @@ const services = [
   {
     slug: "location-de-benne",
     img: "/images/5.webp",
-    heroImg: "/images/project/tugauttp_entrepot.jpg",
+    heroImg: "/images/project/locPelle.jpeg",
     title: "Location de benne",
     desc: "Bennes à gravats (10 m³), DIB (30 m³) ou végétaux (30 m³).",
     intro:
@@ -148,7 +148,7 @@ const services = [
   {
     slug: "location-pelle-chauffeur",
     img: "/images/6.webp",
-    heroImg: "/images/project/tugauttp_entrepot.jpg",
+    heroImg: "/images/project/demolition.jpg",
     title: "Location de pelle avec chauffeur",
     desc: "Mise à disposition de pelle avec conducteur pour les professionnels.",
     intro:
