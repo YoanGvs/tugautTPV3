@@ -63,7 +63,7 @@ const services = [
   {
     slug: "amenagement-exterieur",
     img: "./../images/3.webp",
-    heroImg: "/images/project/terrassement6.jpg",
+    heroImg: "/images/project/terrassement6.webp",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
     intro:
@@ -119,7 +119,7 @@ const services = [
   {
     slug: "location-de-benne",
     img: "/images/5.webp",
-    heroImg: "/images/project/locPelle.jpeg",
+    heroImg: "/images/project/locPelle.webp",
     title: "Location de benne",
     desc: "Bennes à gravats (10 m³), DIB (30 m³) ou végétaux (30 m³).",
     intro:
@@ -148,7 +148,7 @@ const services = [
   {
     slug: "location-pelle-chauffeur",
     img: "/images/6.webp",
-    heroImg: "/images/project/demolition.jpg",
+    heroImg: "/images/project/demolition.webp",
     title: "Location de pelle avec chauffeur",
     desc: "Mise à disposition de pelle avec conducteur pour les professionnels.",
     intro:

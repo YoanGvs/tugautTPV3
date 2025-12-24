@@ -38,7 +38,7 @@ const Merci = () => {
                   planifier la prochaine étape. Pour toute question urgente,
                   contactez-nous au&nbsp;
                   <a href="tel:+33612345678" className="color__orange fw-bold">
-                    06 12 34 56 78
+                    06 70 01 24 95
                   </a>
                   .
                 </p>

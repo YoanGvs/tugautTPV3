@@ -42,7 +42,7 @@ const Index = (props) => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/project/tugauttp_entrepot.JPG"
+            src="./../images/project/tugauttp_entrepot.webp"
             className="images__wrap-head"
             alt=""
           />
