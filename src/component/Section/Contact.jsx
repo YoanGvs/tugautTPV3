@@ -12,6 +12,10 @@ const isPhoneValid = (value) => {
   return digits.length >= 10 && digits.length <= 15;
 };
 
+const formatPostalCodeInput = (value) => value.replace(/\D/g, "").slice(0, 5);
+
+const cleanSpaces = (value) => value.trim().replace(/\s+/g, " ");
+
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 const PROJECT_OPTIONS = [
@@ -41,10 +45,10 @@ const initialFormState = {
   phone: "",
   projectType: "",
   siteAddress: "",
+  postalCode: "",
   city: "",
   description: "",
   budget: "",
-  consent: false,
 };
 
 const Contact = () => {
@@ -53,6 +57,8 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [fileError, setFileError] = useState("");
+  // Google Maps sets cookies: only load it when the visitor asks for it
+  const [showMap, setShowMap] = useState(false);
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -89,12 +95,14 @@ const Contact = () => {
         return isPhoneValid(value) ? "" : "Numéro de téléphone invalide.";
       case "projectType":
         return value ? "" : "Sélectionnez un type de projet.";
+      case "siteAddress":
+        return value.trim() ? "" : "Indiquez l'adresse du chantier.";
+      case "postalCode":
+        return /^\d{5}$/.test(value) ? "" : "Code postal invalide (5 chiffres).";
       case "city":
         return value.trim() ? "" : "Indiquez la ville du chantier.";
       case "description":
         return value.trim() ? "" : "Décrivez brièvement votre besoin.";
-      case "consent":
-        return value ? "" : "Veuillez accepter pour envoyer.";
       default:
         return "";
     }
@@ -107,7 +115,9 @@ const Contact = () => {
   };
 
   const updateField = (field, value) => {
-    const nextValue = field === "phone" ? formatPhoneInput(value) : value;
+    let nextValue = value;
+    if (field === "phone") nextValue = formatPhoneInput(value);
+    if (field === "postalCode") nextValue = formatPostalCodeInput(value);
     setFormData((prev) => ({
       ...prev,
       [field]: nextValue,
@@ -138,17 +148,19 @@ const Contact = () => {
       "email",
       "phone",
       "projectType",
+      "siteAddress",
+      "postalCode",
+      "city",
       "description",
-      "consent",
     ];
 
-    const newErrors = requiredFields.reduce((acc, field) => {
-      const value = field === "consent" ? formData.consent : formData[field];
-      return {
+    const newErrors = requiredFields.reduce(
+      (acc, field) => ({
         ...acc,
-        [field]: validateField(field, value),
-      };
-    }, {});
+        [field]: validateField(field, formData[field]),
+      }),
+      {}
+    );
 
     const currentFileError = validateFiles(selectedFiles);
     setFileError(currentFileError);
@@ -168,7 +180,7 @@ const Contact = () => {
   return (
     <section className="position-relative" id="contact-form">
       <img
-        src="./../images/project/mini_pelle.webp"
+        src="/images/project/mini_pelle.webp"
         className="images__wrap-contact"
         alt=""
       />
@@ -189,16 +201,40 @@ const Contact = () => {
             </p>
             <div className="mt-4 d-none d-lg-block">
               <div className="ratio ratio-4x3 rounded overflow-hidden shadow">
-                <iframe
-                  className="map-embed"
-                  title="TUGAUT TP localisation"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.197972965726!2d2.6770133758687593!3d49.31053436878243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e632fc555220af%3A0x4cda2140a959c447!2sTugaut%20tp!5e0!3m2!1sfr!2sfr!4v1764346960590!5m2!1sfr!2sfr"
-                  width="600"
-                  height="450"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                {showMap ? (
+                  <iframe
+                    className="map-embed"
+                    title="TUGAUT TP localisation"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.197972965726!2d2.6770133758687593!3d49.31053436878243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e632fc555220af%3A0x4cda2140a959c447!2sTugaut%20tp!5e0!3m2!1sfr!2sfr!4v1764346960590!5m2!1sfr!2sfr"
+                    width="600"
+                    height="450"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                ) : (
+                  <div className="d-flex flex-column align-items-center justify-content-center text-center bg__white p-4">
+                    <p className="roboto normal font__size--16 color__black mb-3">
+                      La carte est fournie par Google Maps, qui peut déposer
+                      des cookies sur votre appareil.
+                    </p>
+                    <button
+                      type="button"
+                      className="semi-bold rounded-0 font__size--14 btn btn__orange shadow color__white text-uppercase mb-3"
+                      onClick={() => setShowMap(true)}
+                    >
+                      Afficher la carte
+                    </button>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Tugaut+TP+Pontpoint"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="color__orange text-decoration-underline font__size--14"
+                    >
+                      Ou ouvrir dans Google Maps
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -218,8 +254,8 @@ const Contact = () => {
               )}
               {state.errors?.length > 0 && (
                 <div className="alert alert-danger mb-4" role="alert">
-                  Une erreur est survenue. Réessayez ou contactez-nous au 06 12
-                  34 56 78.
+                  Une erreur est survenue. Réessayez ou contactez-nous au 06 70
+                  01 24 95.
                 </div>
               )}
               <div className="form-group mb-4">
@@ -315,26 +351,59 @@ const Contact = () => {
                   <p className="text-danger small mb-0">{errors.projectType}</p>
                 )}
               </div>
-              {/* <div className="form-group mb-4">
+              <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-site-address"
                 >
-                  Adresse du chantier
+                  Adresse du chantier*
                 </label>
                 <input
                   id="contact-site-address"
                   name="siteAddress"
                   type="text"
+                  autoComplete="street-address"
                   className="form-control wrapper__field"
                   placeholder="12 rue des Artisans"
                   value={formData.siteAddress}
                   onChange={(event) =>
                     updateField("siteAddress", event.target.value)
                   }
+                  onBlur={(event) =>
+                    updateField("siteAddress", cleanSpaces(event.target.value))
+                  }
+                  required
                 />
-              </div> */}
-              {/* <div className="form-group mb-4">
+                {errors.siteAddress && (
+                  <p className="text-danger small mb-0">{errors.siteAddress}</p>
+                )}
+              </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-postal-code"
+                >
+                  Code postal*
+                </label>
+                <input
+                  id="contact-postal-code"
+                  name="postalCode"
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="postal-code"
+                  className="form-control wrapper__field"
+                  placeholder="60700"
+                  value={formData.postalCode}
+                  onChange={(event) =>
+                    updateField("postalCode", event.target.value)
+                  }
+                  required
+                />
+                {errors.postalCode && (
+                  <p className="text-danger small mb-0">{errors.postalCode}</p>
+                )}
+              </div>
+              <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-city"
@@ -350,6 +419,9 @@ const Contact = () => {
                   placeholder="Compiègne"
                   value={formData.city}
                   onChange={(event) => updateField("city", event.target.value)}
+                  onBlur={(event) =>
+                    updateField("city", cleanSpaces(event.target.value))
+                  }
                   required
                 />
                 <datalist id="oise-cities">
@@ -360,7 +432,7 @@ const Contact = () => {
                 {errors.city && (
                   <p className="text-danger small mb-0">{errors.city}</p>
                 )}
-              </div> */}
+              </div>
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
@@ -425,35 +497,18 @@ const Contact = () => {
                   <p className="text-danger small mb-0">{fileError}</p>
                 )}
               </div> */}
-              <div className="form-group mb-4 form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="contact-consent"
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={(event) =>
-                    updateField("consent", event.target.checked)
-                  }
-                  required
-                />
-                <label
-                  className="form-check-label semi-bold font__size--14 text__14-1024"
-                  htmlFor="contact-consent"
+              <p className="roboto normal font__size--14 text__14-1024 color__gray-1 mb-4">
+                Vos informations servent uniquement à traiter votre demande de
+                devis. Elles sont conservées 3 ans, puis supprimées. Pour les
+                consulter ou les faire effacer, voir notre{" "}
+                <a
+                  href="/privacy"
+                  className="color__orange text-decoration-underline"
                 >
-                  J'ai lu et j'accepte les{" "}
-                  <a
-                    href="/privacy"
-                    className="color__orange text-decoration-underline"
-                  >
-                    conditions générales d'utilisation
-                  </a>
-                  .
-                </label>
-                {errors.consent && (
-                  <p className="text-danger small mb-0">{errors.consent}</p>
-                )}
-              </div>
+                  politique de confidentialité
+                </a>
+                .
+              </p>
               <button
                 type="submit"
                 className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"

@@ -58,21 +58,21 @@ const SliderConstruction = () => {
       >
         <div className="items">
           <img
-            src="./../images/TTP1.webp"
+            src="/images/TTP1.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP3.webp"
+            src="/images/TTP3.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP4.webp"
+            src="/images/TTP4.webp"
             className="images__construction"
             alt=""
           />
@@ -80,105 +80,105 @@ const SliderConstruction = () => {
 
         <div className="items">
           <img
-            src="./../images/TTP7.webp"
+            src="/images/TTP7.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP8.webp"
+            src="/images/TTP8.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP9.webp"
+            src="/images/TTP9.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP10.webp"
+            src="/images/TTP10.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/TTP11.webp"
+            src="/images/TTP11.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/maison.webp"
+            src="/images/project/maison.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/cloture.webp"
+            src="/images/project/cloture.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/terrassement4.JPG"
+            src="/images/project/terrassement4.JPG"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/tugauttp_entrepot.JPG"
+            src="/images/project/tugauttp_entrepot.JPG"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/mini_pelle.webp"
+            src="/images/project/mini_pelle.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/assainissement.webp"
+            src="/images/project/assainissement.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/assainissement2.JPG"
+            src="/images/project/assainissement2.JPG"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/assainissement3.JPEG"
+            src="/images/project/assainissement3.JPEG"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/chemin.webp"
+            src="/images/project/chemin.webp"
             className="images__construction"
             alt=""
           />
         </div>
         <div className="items">
           <img
-            src="./../images/project/cloture.webp"
+            src="/images/project/cloture.webp"
             className="images__construction"
             alt=""
           />

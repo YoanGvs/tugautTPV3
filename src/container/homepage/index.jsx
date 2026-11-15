@@ -16,21 +16,21 @@ const Index = (props) => {
   const featuredServices = services.slice(0, 3);
   const blog = [
     {
-      img: "./../images/bg (1).png",
+      img: "/images/bg (1).png",
       tag: "oil & gas",
       date: "29 Nov 2022",
       title: "Cargo flow through better supply chain visibility, control.",
       desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
     },
     {
-      img: "./../images/bg (3).png",
+      img: "/images/bg (3).png",
       tag: "oil & gas",
       date: "29 Nov 2022",
       title: "Cargo flow through better supply chain visibility, control.",
       desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
     },
     {
-      img: "./../images/bg (2).png",
+      img: "/images/bg (2).png",
       tag: "oil & gas",
       date: "29 Nov 2022",
       title: "Cargo flow through better supply chain visibility, control.",
@@ -42,7 +42,7 @@ const Index = (props) => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/project/tugauttp_entrepot.webp"
+            src="/images/project/tugauttp_entrepot.webp"
             className="images__wrap-head"
             alt=""
           />

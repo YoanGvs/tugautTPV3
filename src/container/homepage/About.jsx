@@ -14,7 +14,7 @@ const About = () => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/project/tugauttp_entrepot.JPG"
+            src="/images/project/tugauttp_entrepot.JPG"
             className="images__wrap-head"
             alt=""
           />
@@ -42,16 +42,16 @@ const About = () => {
                             <div className="col-md-6 col-lg-4 mb-4">
                                 <div className="wrapper__card-team">
                                     <div className="position-relative image">
-                                        <img src="./../images/Image (1).png" alt="" />
+                                        <img src="/images/Image (1).png" alt="" />
                                         <div className="sosmed d-flex align-items-center justify-content-center">
                                             <a href="#!">
-                                                <img src="./../images/ssa (1).png" alt="" />
+                                                <img src="/images/ssa (1).png" alt="" />
                                             </a>
                                             <a href="#!" className='mx-3'>
-                                                <img src="./../images/ssa (2).png" alt="" />
+                                                <img src="/images/ssa (2).png" alt="" />
                                             </a>
                                             <a href="#!">
-                                                <img src="./../images/ssa (3).png" alt="" />
+                                                <img src="/images/ssa (3).png" alt="" />
                                             </a>
                                         </div>
                                         <div className="bg"></div>
@@ -65,16 +65,16 @@ const About = () => {
                             <div className="col-md-6 col-lg-4 mb-4">
                                 <div className="wrapper__card-team">
                                     <div className="position-relative image">
-                                        <img src="./../images/Image (2).png" alt="" />
+                                        <img src="/images/Image (2).png" alt="" />
                                         <div className="sosmed d-flex align-items-center justify-content-center">
                                             <a href="#!">
-                                                <img src="./../images/ssa (1).png" alt="" />
+                                                <img src="/images/ssa (1).png" alt="" />
                                             </a>
                                             <a href="#!" className='mx-3'>
-                                                <img src="./../images/ssa (2).png" alt="" />
+                                                <img src="/images/ssa (2).png" alt="" />
                                             </a>
                                             <a href="#!">
-                                                <img src="./../images/ssa (3).png" alt="" />
+                                                <img src="/images/ssa (3).png" alt="" />
                                             </a>
                                         </div>
                                         <div className="bg"></div>
@@ -88,16 +88,16 @@ const About = () => {
                             <div className="col-md-6 col-lg-4 mb-4">
                                 <div className="wrapper__card-team">
                                     <div className="position-relative image">
-                                        <img src="./../images/Image (3).png" alt="" />
+                                        <img src="/images/Image (3).png" alt="" />
                                         <div className="sosmed d-flex align-items-center justify-content-center">
                                             <a href="#!">
-                                                <img src="./../images/ssa (1).png" alt="" />
+                                                <img src="/images/ssa (1).png" alt="" />
                                             </a>
                                             <a href="#!" className='mx-3'>
-                                                <img src="./../images/ssa (2).png" alt="" />
+                                                <img src="/images/ssa (2).png" alt="" />
                                             </a>
                                             <a href="#!">
-                                                <img src="./../images/ssa (3).png" alt="" />
+                                                <img src="/images/ssa (3).png" alt="" />
                                             </a>
                                         </div>
                                         <div className="bg"></div>
