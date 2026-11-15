@@ -74,3 +74,16 @@ test("envoie la demande quand l'adresse et la ville sont remplies", () => {
 
   expect(mockHandleSubmit).toHaveBeenCalled();
 });
+
+test("ne charge pas la carte Google tant que le visiteur n'a pas cliqué", () => {
+  render(<Contact />);
+
+  expect(screen.queryByTitle("TUGAUT TP localisation")).not.toBeInTheDocument();
+});
+
+test("charge la carte Google après un clic sur Afficher la carte", () => {
+  render(<Contact />);
+  fireEvent.click(screen.getByRole("button", { name: /afficher la carte/i }));
+
+  expect(screen.getByTitle("TUGAUT TP localisation")).toBeInTheDocument();
+});

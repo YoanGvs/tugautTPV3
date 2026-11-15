@@ -53,6 +53,8 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [fileError, setFileError] = useState("");
+  // Google Maps sets cookies: only load it when the visitor asks for it
+  const [showMap, setShowMap] = useState(false);
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -193,16 +195,40 @@ const Contact = () => {
             </p>
             <div className="mt-4 d-none d-lg-block">
               <div className="ratio ratio-4x3 rounded overflow-hidden shadow">
-                <iframe
-                  className="map-embed"
-                  title="TUGAUT TP localisation"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.197972965726!2d2.6770133758687593!3d49.31053436878243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e632fc555220af%3A0x4cda2140a959c447!2sTugaut%20tp!5e0!3m2!1sfr!2sfr!4v1764346960590!5m2!1sfr!2sfr"
-                  width="600"
-                  height="450"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                {showMap ? (
+                  <iframe
+                    className="map-embed"
+                    title="TUGAUT TP localisation"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.197972965726!2d2.6770133758687593!3d49.31053436878243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e632fc555220af%3A0x4cda2140a959c447!2sTugaut%20tp!5e0!3m2!1sfr!2sfr!4v1764346960590!5m2!1sfr!2sfr"
+                    width="600"
+                    height="450"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                ) : (
+                  <div className="d-flex flex-column align-items-center justify-content-center text-center bg__white p-4">
+                    <p className="roboto normal font__size--16 color__black mb-3">
+                      La carte est fournie par Google Maps, qui peut déposer
+                      des cookies sur votre appareil.
+                    </p>
+                    <button
+                      type="button"
+                      className="semi-bold rounded-0 font__size--14 btn btn__orange shadow color__white text-uppercase mb-3"
+                      onClick={() => setShowMap(true)}
+                    >
+                      Afficher la carte
+                    </button>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Tugaut+TP+Pontpoint"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="color__orange text-decoration-underline font__size--14"
+                    >
+                      Ou ouvrir dans Google Maps
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
