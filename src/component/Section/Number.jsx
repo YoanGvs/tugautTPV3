@@ -3,7 +3,7 @@ import React from 'react'
 const Number = () => {
     return (
         <section className='position-relative'>
-            <img src="./../images/Bg.png" className="images__wrap-head" alt="" />
+            <img src="/images/Bg.png" className="images__wrap-head" alt="" />
             <div className="wrapper__bg-head two"></div>
             <div className="container position-relative z-2">
                 <div className="row justify-content-center">

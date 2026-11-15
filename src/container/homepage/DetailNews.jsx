@@ -8,21 +8,21 @@ import Head from '../../component/Section/Head'
 const DetailNews = () => {
     const blog = [
         {
-            img: "./../images/bg (1).png",
+            img: "/images/bg (1).png",
             tag: "oil & gas",
             date: "29 Nov 2022",
             title: "Cargo flow through better supply chain visibility, control.",
             desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
         },
         {
-            img: "./../images/bg (3).png",
+            img: "/images/bg (3).png",
             tag: "oil & gas",
             date: "29 Nov 2022",
             title: "Cargo flow through better supply chain visibility, control.",
             desc: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
         },
         {
-            img: "./../images/bg (2).png",
+            img: "/images/bg (2).png",
             tag: "oil & gas",
             date: "29 Nov 2022",
             title: "Cargo flow through better supply chain visibility, control.",
@@ -33,7 +33,7 @@ const DetailNews = () => {
         <Fragment>
             <div className="overflow-hidden">
                 <div className="position-relative">
-                    <img src="./../images/project/tugauttp_entrepot.JPG" className="images__wrap-head" alt="" />
+                    <img src="/images/project/tugauttp_entrepot.JPG" className="images__wrap-head" alt="" />
                     <div className="wrapper__bg-head"></div>
                     <Navbar />
                     <Head default="home" current="Detail News" title={"Detail News"} />
@@ -50,22 +50,22 @@ const DetailNews = () => {
                             </div>
                         </div>
 
-                        <img src="./../images/as (1).png" className='w-100 images__blog-head mb-5' alt="" />
+                        <img src="/images/as (1).png" className='w-100 images__blog-head mb-5' alt="" />
 
                         <div className="position-relative">
 
                             <div className="wrapper__sosmed-left d-none d-md-block">
                                 <a href="#!">
-                                    <img src="./../images/sos (1).png" alt="" />
+                                    <img src="/images/sos (1).png" alt="" />
                                 </a>
                                 <a href="#!">
-                                    <img src="./../images/sos (4).png" alt="" />
+                                    <img src="/images/sos (4).png" alt="" />
                                 </a>
                                 <a href="#!">
-                                    <img src="./../images/sos (3).png" alt="" />
+                                    <img src="/images/sos (3).png" alt="" />
                                 </a>
                                 <a href="#!">
-                                    <img src="./../images/sos (2).png" alt="" />
+                                    <img src="/images/sos (2).png" alt="" />
                                 </a>
                             </div>
 
@@ -92,7 +92,7 @@ const DetailNews = () => {
                                         <li>Aenean dictumst risus posuere a at id fermentum nibh.</li>
                                     </ul>
 
-                                    <img src="./../images/as (2).png" className='w-100 mb-3' alt="" />
+                                    <img src="/images/as (2).png" className='w-100 mb-3' alt="" />
 
                                     <p className='normal roboto font__size--16 text__16-1024 color__gray-1 lh-2 mb-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id pellentesque ut pellentesque varius amet mauris. Tempor, risus, congue gravida nulla tincidunt nec diam. Tincidunt magnis eu, vitae dictumst commodo dolor in. Aenean dictumst risus posuere a at id fermentum nibh. Luctus nunc bibendum duis egestas scelerisque. </p>
                                     <p className='normal roboto font__size--16 text__16-1024 color__gray-1 lh-2 mb-3'>Maecenas in pharetra hendrerit neque, tellus eu. Arcu tempus, vel blandit adipiscing a sed cursus. Augue vestibulum tempus lectus gravida condimentum mauris iaculis. Sodales imperdiet id maecenas molestie id.</p>

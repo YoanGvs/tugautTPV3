@@ -184,7 +184,7 @@ const Contact = () => {
   return (
     <section className="position-relative" id="contact-form">
       <img
-        src="./../images/project/mini_pelle.webp"
+        src="/images/project/mini_pelle.webp"
         className="images__wrap-contact"
         alt=""
       />

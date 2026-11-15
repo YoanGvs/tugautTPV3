@@ -30,7 +30,7 @@ const Project = () => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/project/tugauttp_entrepot.JPG"
+            src="/images/project/tugauttp_entrepot.JPG"
             className="images__wrap-head"
             alt=""
           />

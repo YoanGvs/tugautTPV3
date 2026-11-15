@@ -15,7 +15,7 @@ const Step = () => {
 
             <div className="d-flex align-items-start animate-fade-up animate-delay-2">
               <img
-                src="./../images/consulting.png"
+                src="/images/consulting.png"
                 className="object-fit-content"
                 alt=""
               />
@@ -32,7 +32,7 @@ const Step = () => {
             </div>
             <div className="d-flex align-items-start my-4 animate-fade-up animate-delay-3">
               <img
-                src="./../images/planning.png"
+                src="/images/planning.png"
                 className="object-fit-content"
                 alt=""
               />
@@ -49,7 +49,7 @@ const Step = () => {
             </div>
             <div className="d-flex align-items-start animate-fade-up animate-delay-4">
               <img
-                src="./../images/checking.png"
+                src="/images/checking.png"
                 className="object-fit-content"
                 alt=""
               />
@@ -66,7 +66,7 @@ const Step = () => {
             </div>
           </div>
           <div className="order-md-12 order-1 mb-4 col-md-6 col-lg-5 my-md-auto text-right animate-fade-up animate-delay-2">
-            <img src="./../images/imageStep.webp" className="w-100" alt="" />
+            <img src="/images/imageStep.webp" className="w-100" alt="" />
           </div>
         </div>
       </div>

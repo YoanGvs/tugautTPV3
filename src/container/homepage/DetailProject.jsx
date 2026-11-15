@@ -10,7 +10,7 @@ const DetailProject = () => {
       <div className="overflow-hidden">
         <div className="position-relative">
           <img
-            src="./../images/project/tugauttp_entrepot.webp"
+            src="/images/project/tugauttp_entrepot.webp"
             className="images__wrap-head"
             alt=""
           />
@@ -35,28 +35,28 @@ const DetailProject = () => {
             </div>
 
             <img
-              src="./../images/sdsdsad.png"
+              src="/images/sdsdsad.png"
               className="images__cover-head mb-4"
               alt=""
             />
             <div className="row">
               <div className="col-4">
                 <img
-                  src="./../images/project-one-img-1.jpg.png"
+                  src="/images/project-one-img-1.jpg.png"
                   className="images__cover-detail"
                   alt=""
                 />
               </div>
               <div className="col-4">
                 <img
-                  src="./../images/project-one-img-3.jpg.png"
+                  src="/images/project-one-img-3.jpg.png"
                   className="images__cover-detail"
                   alt=""
                 />
               </div>
               <div className="col-4">
                 <img
-                  src="./../images/project-one-img-4.jpg.png"
+                  src="/images/project-one-img-4.jpg.png"
                   className="images__cover-detail"
                   alt=""
                 />
@@ -166,7 +166,7 @@ const DetailProject = () => {
                   className="wrapper__list-document d-inline-block color__gray-1"
                 >
                   <div className="d-flex align-items-center">
-                    <img src="./../images/pdf (1) 1.png" alt="" />
+                    <img src="/images/pdf (1) 1.png" alt="" />
                     <div className="ms-2 semi-bold font__size--14 text__14-1024 text-uppercase">
                       download COMPANY PROFILE
                     </div>
@@ -177,7 +177,7 @@ const DetailProject = () => {
                   className="wrapper__list-document d-inline-block color__gray-1 my-3"
                 >
                   <div className="d-flex align-items-center">
-                    <img src="./../images/pdf (1) 1.png" alt="" />
+                    <img src="/images/pdf (1) 1.png" alt="" />
                     <div className="ms-2 semi-bold font__size--14 text__14-1024 text-uppercase">
                       product info
                     </div>
@@ -188,7 +188,7 @@ const DetailProject = () => {
                   className="wrapper__list-document d-inline-block color__gray-1"
                 >
                   <div className="d-flex align-items-center">
-                    <img src="./../images/pdf (1) 1.png" alt="" />
+                    <img src="/images/pdf (1) 1.png" alt="" />
                     <div className="ms-2 semi-bold font__size--14 text__14-1024 text-uppercase">
                       pricing table
                     </div>

@@ -62,7 +62,7 @@ const services = [
   },
   {
     slug: "amenagement-exterieur",
-    img: "./../images/3.webp",
+    img: "/images/3.webp",
     heroImg: "/images/project/terrassement6.webp",
     title: "Aménagement extérieur",
     desc: "Pavage, enrobé, gravillonnage et autres travaux d’extérieur.",
@@ -92,7 +92,7 @@ const services = [
   },
   {
     slug: "demolition",
-    img: "./../images/4.webp",
+    img: "/images/4.webp",
     heroImg: "/images/project/tugauttp_entrepot.JPG",
     title: "Démolition",
     desc: "Interventions réalisées dans le respect des normes environnementales.",
