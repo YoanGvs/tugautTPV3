@@ -89,6 +89,8 @@ const Contact = () => {
         return isPhoneValid(value) ? "" : "Numéro de téléphone invalide.";
       case "projectType":
         return value ? "" : "Sélectionnez un type de projet.";
+      case "siteAddress":
+        return value.trim() ? "" : "Indiquez l'adresse du chantier.";
       case "city":
         return value.trim() ? "" : "Indiquez la ville du chantier.";
       case "description":
@@ -138,6 +140,8 @@ const Contact = () => {
       "email",
       "phone",
       "projectType",
+      "siteAddress",
+      "city",
       "description",
       "consent",
     ];
@@ -315,26 +319,31 @@ const Contact = () => {
                   <p className="text-danger small mb-0">{errors.projectType}</p>
                 )}
               </div>
-              {/* <div className="form-group mb-4">
+              <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-site-address"
                 >
-                  Adresse du chantier
+                  Adresse du chantier*
                 </label>
                 <input
                   id="contact-site-address"
                   name="siteAddress"
                   type="text"
+                  autoComplete="street-address"
                   className="form-control wrapper__field"
                   placeholder="12 rue des Artisans"
                   value={formData.siteAddress}
                   onChange={(event) =>
                     updateField("siteAddress", event.target.value)
                   }
+                  required
                 />
-              </div> */}
-              {/* <div className="form-group mb-4">
+                {errors.siteAddress && (
+                  <p className="text-danger small mb-0">{errors.siteAddress}</p>
+                )}
+              </div>
+              <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
                   htmlFor="contact-city"
@@ -360,7 +369,7 @@ const Contact = () => {
                 {errors.city && (
                   <p className="text-danger small mb-0">{errors.city}</p>
                 )}
-              </div> */}
+              </div>
               <div className="form-group mb-4">
                 <label
                   className="semi-bold font__size--14 text__14-1024 text-uppercase"
