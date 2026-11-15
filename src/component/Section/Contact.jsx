@@ -49,7 +49,6 @@ const initialFormState = {
   city: "",
   description: "",
   budget: "",
-  consent: false,
 };
 
 const Contact = () => {
@@ -104,8 +103,6 @@ const Contact = () => {
         return value.trim() ? "" : "Indiquez la ville du chantier.";
       case "description":
         return value.trim() ? "" : "Décrivez brièvement votre besoin.";
-      case "consent":
-        return value ? "" : "Veuillez accepter pour envoyer.";
       default:
         return "";
     }
@@ -155,16 +152,15 @@ const Contact = () => {
       "postalCode",
       "city",
       "description",
-      "consent",
     ];
 
-    const newErrors = requiredFields.reduce((acc, field) => {
-      const value = field === "consent" ? formData.consent : formData[field];
-      return {
+    const newErrors = requiredFields.reduce(
+      (acc, field) => ({
         ...acc,
-        [field]: validateField(field, value),
-      };
-    }, {});
+        [field]: validateField(field, formData[field]),
+      }),
+      {}
+    );
 
     const currentFileError = validateFiles(selectedFiles);
     setFileError(currentFileError);
@@ -501,35 +497,18 @@ const Contact = () => {
                   <p className="text-danger small mb-0">{fileError}</p>
                 )}
               </div> */}
-              <div className="form-group mb-4 form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="contact-consent"
-                  name="consent"
-                  checked={formData.consent}
-                  onChange={(event) =>
-                    updateField("consent", event.target.checked)
-                  }
-                  required
-                />
-                <label
-                  className="form-check-label semi-bold font__size--14 text__14-1024"
-                  htmlFor="contact-consent"
+              <p className="roboto normal font__size--14 text__14-1024 color__gray-1 mb-4">
+                Vos informations servent uniquement à traiter votre demande de
+                devis. Elles sont conservées 3 ans, puis supprimées. Pour les
+                consulter ou les faire effacer, voir notre{" "}
+                <a
+                  href="/privacy"
+                  className="color__orange text-decoration-underline"
                 >
-                  J'ai lu et j'accepte les{" "}
-                  <a
-                    href="/privacy"
-                    className="color__orange text-decoration-underline"
-                  >
-                    conditions générales d'utilisation
-                  </a>
-                  .
-                </label>
-                {errors.consent && (
-                  <p className="text-danger small mb-0">{errors.consent}</p>
-                )}
-              </div>
+                  politique de confidentialité
+                </a>
+                .
+              </p>
               <button
                 type="submit"
                 className="semi-bold rounded-0 font__size--14 text__14-1024 btn btn__orange shadow color__white text-uppercase"

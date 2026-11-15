@@ -44,7 +44,6 @@ const fillForm = ({ siteAddress = "", postalCode = "60700", city = "" } = {}) =>
   fireEvent.change(screen.getByLabelText(/^description/i), {
     target: { value: "Creuser une tranchée" },
   });
-  fireEvent.click(screen.getByLabelText(/j'ai lu et j'accepte/i));
 };
 
 const submit = () =>
@@ -106,6 +105,23 @@ test("envoie la demande quand l'adresse et la ville sont remplies", () => {
   submit();
 
   expect(mockHandleSubmit).toHaveBeenCalled();
+});
+
+test("explique sous le formulaire à quoi servent les données", () => {
+  render(<Contact />);
+
+  expect(
+    screen.getByText(/servent uniquement à traiter votre demande de devis/i)
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: /politique de confidentialité/i })
+  ).toHaveAttribute("href", "/privacy");
+});
+
+test("n'impose aucune case à cocher pour envoyer une demande", () => {
+  render(<Contact />);
+
+  expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
 });
 
 test("ne charge pas la carte Google tant que le visiteur n'a pas cliqué", () => {
