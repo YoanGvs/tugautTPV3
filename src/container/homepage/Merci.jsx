@@ -37,7 +37,7 @@ const Merci = () => {
                   devis. Nous revenons vers vous pour préciser votre projet et
                   planifier la prochaine étape. Pour toute question urgente,
                   contactez-nous au&nbsp;
-                  <a href="tel:+33612345678" className="color__orange fw-bold">
+                  <a href="tel:+33670012495" className="color__orange fw-bold">
                     06 70 01 24 95
                   </a>
                   .

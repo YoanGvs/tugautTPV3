@@ -248,8 +248,8 @@ const Contact = () => {
               )}
               {state.errors?.length > 0 && (
                 <div className="alert alert-danger mb-4" role="alert">
-                  Une erreur est survenue. Réessayez ou contactez-nous au 06 12
-                  34 56 78.
+                  Une erreur est survenue. Réessayez ou contactez-nous au 06 70
+                  01 24 95.
                 </div>
               )}
               <div className="form-group mb-4">

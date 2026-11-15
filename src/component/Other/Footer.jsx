@@ -89,7 +89,7 @@ const Footer = (props) => {
               <li className="d-flex align-items-start">
                 <img src="/images/Frame.png" alt="adresse" />
                 <span className="ms-2 roboto normal font__size--16 text__16-1024 ">
-                  162 rue Cerisiers Roussel <br /> 60700 Pontpoint
+                  162 rue des Cerisiers Roussel <br /> 60700 Pontpoint
                 </span>
               </li>
             </ul>
