@@ -12,6 +12,10 @@ const isPhoneValid = (value) => {
   return digits.length >= 10 && digits.length <= 15;
 };
 
+const formatPostalCodeInput = (value) => value.replace(/\D/g, "").slice(0, 5);
+
+const cleanSpaces = (value) => value.trim().replace(/\s+/g, " ");
+
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 const PROJECT_OPTIONS = [
@@ -41,6 +45,7 @@ const initialFormState = {
   phone: "",
   projectType: "",
   siteAddress: "",
+  postalCode: "",
   city: "",
   description: "",
   budget: "",
@@ -93,6 +98,8 @@ const Contact = () => {
         return value ? "" : "Sélectionnez un type de projet.";
       case "siteAddress":
         return value.trim() ? "" : "Indiquez l'adresse du chantier.";
+      case "postalCode":
+        return /^\d{5}$/.test(value) ? "" : "Code postal invalide (5 chiffres).";
       case "city":
         return value.trim() ? "" : "Indiquez la ville du chantier.";
       case "description":
@@ -111,7 +118,9 @@ const Contact = () => {
   };
 
   const updateField = (field, value) => {
-    const nextValue = field === "phone" ? formatPhoneInput(value) : value;
+    let nextValue = value;
+    if (field === "phone") nextValue = formatPhoneInput(value);
+    if (field === "postalCode") nextValue = formatPostalCodeInput(value);
     setFormData((prev) => ({
       ...prev,
       [field]: nextValue,
@@ -143,6 +152,7 @@ const Contact = () => {
       "phone",
       "projectType",
       "siteAddress",
+      "postalCode",
       "city",
       "description",
       "consent",
@@ -363,10 +373,38 @@ const Contact = () => {
                   onChange={(event) =>
                     updateField("siteAddress", event.target.value)
                   }
+                  onBlur={(event) =>
+                    updateField("siteAddress", cleanSpaces(event.target.value))
+                  }
                   required
                 />
                 {errors.siteAddress && (
                   <p className="text-danger small mb-0">{errors.siteAddress}</p>
+                )}
+              </div>
+              <div className="form-group mb-4">
+                <label
+                  className="semi-bold font__size--14 text__14-1024 text-uppercase"
+                  htmlFor="contact-postal-code"
+                >
+                  Code postal*
+                </label>
+                <input
+                  id="contact-postal-code"
+                  name="postalCode"
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="postal-code"
+                  className="form-control wrapper__field"
+                  placeholder="60700"
+                  value={formData.postalCode}
+                  onChange={(event) =>
+                    updateField("postalCode", event.target.value)
+                  }
+                  required
+                />
+                {errors.postalCode && (
+                  <p className="text-danger small mb-0">{errors.postalCode}</p>
                 )}
               </div>
               <div className="form-group mb-4">
@@ -385,6 +423,9 @@ const Contact = () => {
                   placeholder="Compiègne"
                   value={formData.city}
                   onChange={(event) => updateField("city", event.target.value)}
+                  onBlur={(event) =>
+                    updateField("city", cleanSpaces(event.target.value))
+                  }
                   required
                 />
                 <datalist id="oise-cities">

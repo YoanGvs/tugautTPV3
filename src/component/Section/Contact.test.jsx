@@ -19,7 +19,7 @@ jest.mock(
   { virtual: true }
 );
 
-const fillForm = ({ siteAddress = "", city = "" } = {}) => {
+const fillForm = ({ siteAddress = "", postalCode = "60700", city = "" } = {}) => {
   fireEvent.change(screen.getByLabelText(/^nom/i), {
     target: { value: "Dupont" },
   });
@@ -34,6 +34,9 @@ const fillForm = ({ siteAddress = "", city = "" } = {}) => {
   });
   fireEvent.change(screen.getByLabelText(/^adresse du chantier/i), {
     target: { value: siteAddress },
+  });
+  fireEvent.change(screen.getByLabelText(/^code postal/i), {
+    target: { value: postalCode },
   });
   fireEvent.change(screen.getByLabelText(/^ville/i), {
     target: { value: city },
@@ -65,6 +68,36 @@ test("refuse l'envoi quand la ville est vide", () => {
 
   expect(screen.getByText("Indiquez la ville du chantier.")).toBeInTheDocument();
   expect(mockHandleSubmit).not.toHaveBeenCalled();
+});
+
+test("refuse l'envoi quand le code postal n'a pas 5 chiffres", () => {
+  render(<Contact />);
+  fillForm({
+    siteAddress: "12 rue des Artisans",
+    postalCode: "607",
+    city: "Pontpoint",
+  });
+  submit();
+
+  expect(screen.getByText("Code postal invalide (5 chiffres).")).toBeInTheDocument();
+  expect(mockHandleSubmit).not.toHaveBeenCalled();
+});
+
+test("ne garde que les chiffres saisis dans le code postal", () => {
+  render(<Contact />);
+  const postalCode = screen.getByLabelText(/^code postal/i);
+  fireEvent.change(postalCode, { target: { value: "60 7a00" } });
+
+  expect(postalCode).toHaveValue("60700");
+});
+
+test("retire les espaces en trop autour de l'adresse quand on quitte le champ", () => {
+  render(<Contact />);
+  const address = screen.getByLabelText(/^adresse du chantier/i);
+  fireEvent.change(address, { target: { value: "  12   rue des Artisans " } });
+  fireEvent.blur(address);
+
+  expect(address).toHaveValue("12 rue des Artisans");
 });
 
 test("envoie la demande quand l'adresse et la ville sont remplies", () => {
